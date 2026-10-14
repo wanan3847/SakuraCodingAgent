@@ -42,7 +42,9 @@ Sakura 不自造 Agent 基础设施：模型调用、Agent Loop、会话、工�
 curl -fsSL https://github.com/wanan3847/SakuraCodingAgent/releases/latest/download/install.sh | sh
 ```
 
-脚本会：检查 Node >= 22.19 与 npm → 从 GitHub Release 下载 `sakura.tgz` 与 `SHA256SUMS` → **校验 SHA-256**（不通过就直接中止，不安装）→ `npm i -g` → 自检并把 `sakura` 位置不在 PATH 的情况告诉你。常用参数：
+脚本会：检查 Node >= 22.19 与 npm → 从 GitHub Release 下载 `sakura.tgz` 与 `SHA256SUMS` → **校验 SHA-256**（不通过就直接中止，不安装）→ `npm i -g` → 自检。自检会比对 PATH 里 `sakura` 的解析结果：如果它指向别的程序（例如你已有的同名项目），脚本会明确告诉你并推荐用 `sakura-agent`。
+
+安装会同时提供两个命令名：**`sakura`** 和 **`sakura-agent`**（同一个入口）。`sakura` 被别的东西占用时用 `sakura-agent`，不必改 PATH。常用参数：
 
 ```sh
 # 指定版本 / 指定安装目录（不需要 sudo）/ 只预演
@@ -284,6 +286,7 @@ rm -rf ~/.sakura                  # 移除独立配置、会话与运行记录�
 
 | 现象 | 处理 |
 | --- | --- |
+| 输入 `sakura` 启动的不是 Sakura Coding Agent | 你的 PATH 里已有同名的 `sakura`（例如旧的 Python/Node 项目）。改用 `sakura-agent`（同一个命令），或把 `$(npm prefix -g)/bin` 放到 PATH 更前面；用 `command -v -a sakura` 看全部命中 |
 | `配置 Sakura 本地模型：sakura init MODEL…` | 没有可用的 loopback 模型：先 `sakura init`，或云端用 `sakura --cloud` 后 `/login` |
 | `Cloud connection requires --cloud …` | `runtime.localOnly: true` 拒绝了非本机端点：用 `--cloud` 或显式改 `sakura.config.yaml` |
 | `sh: tsc: command not found` / 依赖报错 | `node_modules` 被别的 `npm install` 改过（常见于在源码目录里跑 Agent）：`npm ci --ignore-scripts` 重建 |

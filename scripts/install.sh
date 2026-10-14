@@ -155,24 +155,36 @@ elif command -v sakura >/dev/null 2>&1; then
   SAKURA_BIN="$(command -v sakura)"
 fi
 
+ON_PATH="$(command -v sakura 2>/dev/null || true)"
+NAME="sakura"
+CONFLICT=""
+
 if [ -n "$SAKURA_BIN" ]; then
   if installed_version="$("$SAKURA_BIN" --version 2>/dev/null)"; then
-    say "已安装：${SAKURA_BIN}（${installed_version:-版本未报告}）"
+    say "已安装：${SAKURA_BIN}（版本 ${installed_version:-未报告}）"
   else
-    say "已安装：$SAKURA_BIN"
+    say "已安装：${SAKURA_BIN}"
   fi
-  case ":$PATH:" in
-    *":$(dirname "$SAKURA_BIN"):"*) ;;
-    *) warn "$(dirname "$SAKURA_BIN") 不在 PATH 里，请把它加入 PATH（例如加到 ~/.zshrc 或 ~/.bashrc）" ;;
-  esac
+  AGENT_BIN="$(dirname "$SAKURA_BIN")/sakura-agent"
+  if [ -n "$ON_PATH" ] && [ "$ON_PATH" != "$SAKURA_BIN" ]; then
+    CONFLICT="$ON_PATH"
+    if [ -x "$AGENT_BIN" ]; then NAME="sakura-agent"; fi
+    warn "PATH 里的 sakura 指向别的东西：${CONFLICT}"
+    warn "它不是本次安装的命令。请改用 ${NAME}，或把 $(dirname "$SAKURA_BIN") 放到 PATH 更前面。"
+  elif [ -z "$ON_PATH" ]; then
+    warn "$(dirname "$SAKURA_BIN") 不在 PATH 里，请把它加入 PATH（例如加到 ~/.zshrc 或 ~/.bashrc）"
+  fi
+  if [ -x "$AGENT_BIN" ] && [ "$NAME" = "sakura" ]; then
+    say "无冲突的名字（推荐）：${AGENT_BIN}"
+  fi
 else
   warn "没有找到 sakura 命令，请检查 npm 全局目录是否在 PATH 中（npm prefix -g）"
 fi
 
 say ""
 say "下一步："
-say "  sakura init            # 选择本机 Ollama 模型并写入独立配置"
-say "  sakura                 # 启动终端工作台"
-say "  sakura doctor          # 检查独立配置、资源与 MCP"
+say "  ${NAME} init          # 选择本机 Ollama 模型并写入独立配置"
+say "  ${NAME}               # 启动终端工作台"
+say "  ${NAME} doctor        # 检查独立配置、资源与 MCP"
 say ""
 say "卸载：npm rm -g sakura-coding-agent，并按需删除 ~/.sakura"

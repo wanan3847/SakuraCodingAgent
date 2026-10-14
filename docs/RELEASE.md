@@ -37,4 +37,4 @@ npm run release -- --publish # gh 创建 Release（需先 gh auth login；已存
 curl -fsSL https://github.com/wanan3847/SakuraCodingAgent/releases/latest/download/install.sh | sh
 ```
 
-`scripts/install.sh` 会校验 `SHA256SUMS`，校验不通过即中止且不安装；`--version` / `--prefix` / `--dry-run` / `--tarball` 见脚本头部注释。发布前先跑 `npm run check`、`npm run check:plugin`、`npm run check:standalone`。
+发布资产固定三个文件名（`sakura.tgz` / `SHA256SUMS` / `install.sh`），所以一行安装地址不随版本变化。包同时安装 `sakura` 与 `sakura-agent` 两个命令名。`scripts/install.sh` 会校验 `SHA256SUMS`，校验不通过即中止且不安装；`--version` / `--prefix` / `--dry-run` / `--tarball` 见脚本头部注释。发布前先跑 `npm run check`、`npm run check:plugin`、`npm run check:standalone`。

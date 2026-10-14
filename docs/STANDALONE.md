@@ -8,7 +8,7 @@
 
 终端显示阶段、已完成任务、正在运行的任务和最近工具动作；目录/分支、token 与上下文用量、右下角的供应商 · 模型 · 思考级别都用 Pi 原生底栏，Sakura 不重复实现。`/plan 任务` 生成计划，`/subagent 任务` 自动规划并执行子 Agent，`/history` 查看历史。`Ctrl+Shift+X` 取消当前工程运行。模型与供应商切换用 Pi 原生 `/model` 和 `/login`。
 
-没克隆仓库的机器可以直接一行安装（自带 SHA-256 校验）：`curl -fsSL https://github.com/wanan3847/SakuraCodingAgent/releases/latest/download/install.sh | sh`。源码目录用 `npm start`；`npm run app` 一次完成打包安装，之后直接运行 `sakura`。只打包用 `npm run pack`，输出 `sakura.tgz`；分发单个安装包时可用 `npm i -g ./sakura.tgz`。旧的源码入口和 `init --ollama-model NAME` 保留兼容。安装包包含固定版本的 SDK 和 TypeScript 加载器，不需要全局 Pi，也不需要 `pi install`。
+没克隆仓库的机器可以直接一行安装（自带 SHA-256 校验）：`curl -fsSL https://github.com/wanan3847/SakuraCodingAgent/releases/latest/download/install.sh | sh`。源码目录用 `npm start`；`npm run app` 一次完成打包安装，之后直接运行 `sakura`。只打包用 `npm run pack`，输出 `sakura.tgz`；分发单个安装包时可用 `npm i -g ./sakura.tgz`。旧的源码入口和 `init --ollama-model NAME` 保留兼容。安装包包含固定版本的 SDK 和 TypeScript 加载器，不需要全局 Pi，也不需要 `pi install`。安装同时提供 `sakura` 与 `sakura-agent` 两个命令名（同一入口）：PATH 里已有别的 `sakura` 时用 `sakura-agent`。
 
 ## 项目网站与本地记录工具
 

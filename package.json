@@ -1,6 +1,6 @@
 {
   "name": "sakura-coding-agent",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "type": "module",
   "engines": {
@@ -87,6 +87,7 @@
     "benchmarks/reports/candidate-effect-2026-10-13"
   ],
   "bin": {
-    "sakura": "bin/sakura.mjs"
+    "sakura": "bin/sakura.mjs",
+    "sakura-agent": "bin/sakura.mjs"
   }
 }
