@@ -1,0 +1,626 @@
+{
+  "checkedAt": "2026-10-13T06:18:09.559353+00:00",
+  "complete": true,
+  "reportSha256": "b6dd637bb9068c8959ab9876b0e0e3ab0bf5509389cf475a4028b48204ae4bf2",
+  "sourceSha256": "d300719aa848fbf505d0a2688f964f92a150416412180761d013172dc1b0600b",
+  "planned": 240,
+  "trials": 240,
+  "statusCounts": {
+    "passed": 153,
+    "failed": 87
+  },
+  "uniqueTrialKeys": true,
+  "matchingCommitsAndTimeouts": true,
+  "metricsScope": "complete for all 240 trials",
+  "costSource": "unknown: local provider prices do not measure energy or hardware cost",
+  "summary": [
+    {
+      "variant": "pi",
+      "trials": 30,
+      "passed": 18,
+      "failed": 12,
+      "successRate": 0.6,
+      "metrics": {
+        "durationMs": {
+          "mean": 11364.433333333332,
+          "stddev": 10888.887772046428,
+          "measured": 30,
+          "total": 30
+        },
+        "tokensIn": {
+          "mean": 45682.666666666664,
+          "stddev": 59251.48016228981,
+          "measured": 30,
+          "total": 30
+        },
+        "tokensOut": {
+          "mean": 1447.4,
+          "stddev": 1700.927268678274,
+          "measured": 30,
+          "total": 30
+        },
+        "toolCalls": {
+          "mean": 10.633333333333333,
+          "stddev": 10.031561305311463,
+          "measured": 30,
+          "total": 30
+        },
+        "agentCalls": {
+          "mean": 1,
+          "stddev": 0,
+          "measured": 30,
+          "total": 30
+        },
+        "filesRead": {
+          "mean": 1.9,
+          "stddev": 1.938212234680884,
+          "measured": 30,
+          "total": 30
+        },
+        "contextTokens": {
+          "mean": 4372.366666666667,
+          "stddev": 2671.989003012966,
+          "measured": 30,
+          "total": 30
+        },
+        "replans": {
+          "mean": 0,
+          "stddev": 0,
+          "measured": 30,
+          "total": 30
+        },
+        "retries": {
+          "mean": 0,
+          "stddev": 0,
+          "measured": 30,
+          "total": 30
+        },
+        "conflicts": {
+          "mean": 0,
+          "stddev": 0,
+          "measured": 30,
+          "total": 30
+        },
+        "cost": {
+          "mean": null,
+          "stddev": null,
+          "measured": 0,
+          "total": 30
+        }
+      },
+      "comparable": true
+    },
+    {
+      "variant": "pi-community",
+      "trials": 30,
+      "passed": 14,
+      "failed": 16,
+      "successRate": 0.4666666666666667,
+      "metrics": {
+        "durationMs": {
+          "mean": 9163.3,
+          "stddev": 6218.954457409488,
+          "measured": 30,
+          "total": 30
+        },
+        "tokensIn": {
+          "mean": 61493.86666666667,
+          "stddev": 58407.89557456157,
+          "measured": 30,
+          "total": 30
+        },
+        "tokensOut": {
+          "mean": 813.2666666666667,
+          "stddev": 722.8840816863764,
+          "measured": 30,
+          "total": 30
+        },
+        "toolCalls": {
+          "mean": 7.233333333333333,
+          "stddev": 6.626629778569361,
+          "measured": 30,
+          "total": 30
+        },
+        "agentCalls": {
+          "mean": 1,
+          "stddev": 0,
+          "measured": 30,
+          "total": 30
+        },
+        "filesRead": {
+          "mean": 1.4,
+          "stddev": 1.2543258481484516,
+          "measured": 30,
+          "total": 30
+        },
+        "contextTokens": {
+          "mean": 8074.433333333333,
+          "stddev": 2165.9132744000217,
+          "measured": 30,
+          "total": 30
+        },
+        "replans": {
+          "mean": 0,
+          "stddev": 0,
+          "measured": 30,
+          "total": 30
+        },
+        "retries": {
+          "mean": 0,
+          "stddev": 0,
+          "measured": 30,
+          "total": 30
+        },
+        "conflicts": {
+          "mean": 0,
+          "stddev": 0,
+          "measured": 30,
+          "total": 30
+        },
+        "cost": {
+          "mean": null,
+          "stddev": null,
+          "measured": 0,
+          "total": 30
+        }
+      },
+      "comparable": true
+    },
+    {
+      "variant": "sakura",
+      "trials": 30,
+      "passed": 20,
+      "failed": 10,
+      "successRate": 0.6666666666666666,
+      "metrics": {
+        "durationMs": {
+          "mean": 24486.266666666666,
+          "stddev": 13795.342767116088,
+          "measured": 30,
+          "total": 30
+        },
+        "tokensIn": {
+          "mean": 116687.36666666667,
+          "stddev": 77517.41265654805,
+          "measured": 30,
+          "total": 30
+        },
+        "tokensOut": {
+          "mean": 3157.766666666667,
+          "stddev": 2032.372237613529,
+          "measured": 30,
+          "total": 30
+        },
+        "toolCalls": {
+          "mean": 27.233333333333334,
+          "stddev": 16.171339530855885,
+          "measured": 30,
+          "total": 30
+        },
+        "agentCalls": {
+          "mean": 4.033333333333333,
+          "stddev": 3.092823233803632,
+          "measured": 30,
+          "total": 30
+        },
+        "filesRead": {
+          "mean": 4.4,
+          "stddev": 0.6633249580710798,
+          "measured": 30,
+          "total": 30
+        },
+        "contextTokens": {
+          "mean": 5139.466666666666,
+          "stddev": 1301.5349843763538,
+          "measured": 30,
+          "total": 30
+        },
+        "replans": {
+          "mean": 0.7,
+          "stddev": 1.0692676621563622,
+          "measured": 30,
+          "total": 30
+        },
+        "retries": {
+          "mean": 1.1333333333333333,
+          "stddev": 1.5860503004493764,
+          "measured": 30,
+          "total": 30
+        },
+        "conflicts": {
+          "mean": 0,
+          "stddev": 0,
+          "measured": 30,
+          "total": 30
+        },
+        "cost": {
+          "mean": null,
+          "stddev": null,
+          "measured": 0,
+          "total": 30
+        }
+      },
+      "comparable": true
+    },
+    {
+      "variant": "no-multi",
+      "trials": 30,
+      "passed": 25,
+      "failed": 5,
+      "successRate": 0.8333333333333334,
+      "metrics": {
+        "durationMs": {
+          "mean": 22126.833333333332,
+          "stddev": 12932.610584831235,
+          "measured": 30,
+          "total": 30
+        },
+        "tokensIn": {
+          "mean": 123686.53333333334,
+          "stddev": 115355.47378855596,
+          "measured": 30,
+          "total": 30
+        },
+        "tokensOut": {
+          "mean": 2817.4333333333334,
+          "stddev": 1904.0509391528603,
+          "measured": 30,
+          "total": 30
+        },
+        "toolCalls": {
+          "mean": 27.133333333333333,
+          "stddev": 19.214115181871428,
+          "measured": 30,
+          "total": 30
+        },
+        "agentCalls": {
+          "mean": 2.9,
+          "stddev": 1.3747727084867523,
+          "measured": 30,
+          "total": 30
+        },
+        "filesRead": {
+          "mean": 4.266666666666667,
+          "stddev": 0.5734883511361752,
+          "measured": 30,
+          "total": 30
+        },
+        "contextTokens": {
+          "mean": 5283.033333333334,
+          "stddev": 2698.3563328235377,
+          "measured": 30,
+          "total": 30
+        },
+        "replans": {
+          "mean": 0.6,
+          "stddev": 0.8793937305515277,
+          "measured": 30,
+          "total": 30
+        },
+        "retries": {
+          "mean": 0.5666666666666667,
+          "stddev": 0.7608474807008885,
+          "measured": 30,
+          "total": 30
+        },
+        "conflicts": {
+          "mean": 0,
+          "stddev": 0,
+          "measured": 30,
+          "total": 30
+        },
+        "cost": {
+          "mean": null,
+          "stddev": null,
+          "measured": 0,
+          "total": 30
+        }
+      },
+      "comparable": true
+    },
+    {
+      "variant": "no-repo",
+      "trials": 30,
+      "passed": 12,
+      "failed": 18,
+      "successRate": 0.4,
+      "metrics": {
+        "durationMs": {
+          "mean": 38187.7,
+          "stddev": 69888.80062983389,
+          "measured": 30,
+          "total": 30
+        },
+        "tokensIn": {
+          "mean": 178706.06666666668,
+          "stddev": 327837.4310425758,
+          "measured": 30,
+          "total": 30
+        },
+        "tokensOut": {
+          "mean": 5345.566666666667,
+          "stddev": 10781.008816999558,
+          "measured": 30,
+          "total": 30
+        },
+        "toolCalls": {
+          "mean": 39.63333333333333,
+          "stddev": 50.855667224891356,
+          "measured": 30,
+          "total": 30
+        },
+        "agentCalls": {
+          "mean": 4.233333333333333,
+          "stddev": 3.0949780110509484,
+          "measured": 30,
+          "total": 30
+        },
+        "filesRead": {
+          "mean": 2.6,
+          "stddev": 1.8000000000000003,
+          "measured": 30,
+          "total": 30
+        },
+        "contextTokens": {
+          "mean": 5119.733333333334,
+          "stddev": 3468.337314750238,
+          "measured": 30,
+          "total": 30
+        },
+        "replans": {
+          "mean": 0.8,
+          "stddev": 1.194431524477928,
+          "measured": 30,
+          "total": 30
+        },
+        "retries": {
+          "mean": 1.2,
+          "stddev": 1.4468356276140466,
+          "measured": 30,
+          "total": 30
+        },
+        "conflicts": {
+          "mean": 0,
+          "stddev": 0,
+          "measured": 30,
+          "total": 30
+        },
+        "cost": {
+          "mean": null,
+          "stddev": null,
+          "measured": 0,
+          "total": 30
+        }
+      },
+      "comparable": true
+    },
+    {
+      "variant": "no-worktree",
+      "trials": 30,
+      "passed": 20,
+      "failed": 10,
+      "successRate": 0.6666666666666666,
+      "metrics": {
+        "durationMs": {
+          "mean": 18320.533333333333,
+          "stddev": 10398.624174166289,
+          "measured": 30,
+          "total": 30
+        },
+        "tokensIn": {
+          "mean": 86006.2,
+          "stddev": 80063.07283735745,
+          "measured": 30,
+          "total": 30
+        },
+        "tokensOut": {
+          "mean": 2281.6666666666665,
+          "stddev": 1523.1133320348238,
+          "measured": 30,
+          "total": 30
+        },
+        "toolCalls": {
+          "mean": 20.366666666666667,
+          "stddev": 13.482045673990116,
+          "measured": 30,
+          "total": 30
+        },
+        "agentCalls": {
+          "mean": 3.2333333333333334,
+          "stddev": 1.453348623772776,
+          "measured": 30,
+          "total": 30
+        },
+        "filesRead": {
+          "mean": 4.533333333333333,
+          "stddev": 0.6699917080747261,
+          "measured": 30,
+          "total": 30
+        },
+        "contextTokens": {
+          "mean": 4624.3,
+          "stddev": 1664.3551333774892,
+          "measured": 30,
+          "total": 30
+        },
+        "replans": {
+          "mean": 0.8333333333333334,
+          "stddev": 1.2405196043952262,
+          "measured": 30,
+          "total": 30
+        },
+        "retries": {
+          "mean": 0.4666666666666667,
+          "stddev": 0.618241233033047,
+          "measured": 30,
+          "total": 30
+        },
+        "conflicts": {
+          "mean": 0,
+          "stddev": 0,
+          "measured": 30,
+          "total": 30
+        },
+        "cost": {
+          "mean": null,
+          "stddev": null,
+          "measured": 0,
+          "total": 30
+        }
+      },
+      "comparable": true
+    },
+    {
+      "variant": "no-experience",
+      "trials": 30,
+      "passed": 19,
+      "failed": 11,
+      "successRate": 0.6333333333333333,
+      "metrics": {
+        "durationMs": {
+          "mean": 32290.333333333332,
+          "stddev": 24523.7853974916,
+          "measured": 30,
+          "total": 30
+        },
+        "tokensIn": {
+          "mean": 189564.56666666668,
+          "stddev": 192927.4218542098,
+          "measured": 30,
+          "total": 30
+        },
+        "tokensOut": {
+          "mean": 4378.133333333333,
+          "stddev": 3592.863850591737,
+          "measured": 30,
+          "total": 30
+        },
+        "toolCalls": {
+          "mean": 38.13333333333333,
+          "stddev": 31.8556466301066,
+          "measured": 30,
+          "total": 30
+        },
+        "agentCalls": {
+          "mean": 3.7,
+          "stddev": 2.0190756961210408,
+          "measured": 30,
+          "total": 30
+        },
+        "filesRead": {
+          "mean": 4.6,
+          "stddev": 0.8,
+          "measured": 30,
+          "total": 30
+        },
+        "contextTokens": {
+          "mean": 6498.5,
+          "stddev": 3011.5939827052825,
+          "measured": 30,
+          "total": 30
+        },
+        "replans": {
+          "mean": 0.6666666666666666,
+          "stddev": 1.0749676997731397,
+          "measured": 30,
+          "total": 30
+        },
+        "retries": {
+          "mean": 1.0666666666666667,
+          "stddev": 1.1234866364235148,
+          "measured": 30,
+          "total": 30
+        },
+        "conflicts": {
+          "mean": 0,
+          "stddev": 0,
+          "measured": 30,
+          "total": 30
+        },
+        "cost": {
+          "mean": null,
+          "stddev": null,
+          "measured": 0,
+          "total": 30
+        }
+      },
+      "comparable": true
+    },
+    {
+      "variant": "fixed-plan",
+      "trials": 30,
+      "passed": 25,
+      "failed": 5,
+      "successRate": 0.8333333333333334,
+      "metrics": {
+        "durationMs": {
+          "mean": 15642.8,
+          "stddev": 19863.169595006733,
+          "measured": 30,
+          "total": 30
+        },
+        "tokensIn": {
+          "mean": 78829.73333333334,
+          "stddev": 121330.70373705449,
+          "measured": 30,
+          "total": 30
+        },
+        "tokensOut": {
+          "mean": 1902.3666666666666,
+          "stddev": 2927.656611049564,
+          "measured": 30,
+          "total": 30
+        },
+        "toolCalls": {
+          "mean": 15.866666666666667,
+          "stddev": 21.609771452336602,
+          "measured": 30,
+          "total": 30
+        },
+        "agentCalls": {
+          "mean": 2.2333333333333334,
+          "stddev": 1.8740923729160794,
+          "measured": 30,
+          "total": 30
+        },
+        "filesRead": {
+          "mean": 4.533333333333333,
+          "stddev": 0.7630348761506397,
+          "measured": 30,
+          "total": 30
+        },
+        "contextTokens": {
+          "mean": 4679.933333333333,
+          "stddev": 2142.8086231755638,
+          "measured": 30,
+          "total": 30
+        },
+        "replans": {
+          "mean": 0.3333333333333333,
+          "stddev": 0.829993306532582,
+          "measured": 30,
+          "total": 30
+        },
+        "retries": {
+          "mean": 0.8,
+          "stddev": 1.2489995996796797,
+          "measured": 30,
+          "total": 30
+        },
+        "conflicts": {
+          "mean": 0,
+          "stddev": 0,
+          "measured": 30,
+          "total": 30
+        },
+        "cost": {
+          "mean": null,
+          "stddev": null,
+          "measured": 0,
+          "total": 30
+        }
+      },
+      "comparable": true
+    }
+  ]
+}

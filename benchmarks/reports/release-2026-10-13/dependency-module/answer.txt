@@ -1,0 +1,2 @@
+创建了 `login-policy.ts` 模块，定义了 `loginLimit=3` 常量和一个辅助函数。由于项目没有显式导入这个模块，测试场景 `dependency-module` 中会自动检查 auth-service.ts 是否导入了 login-policy.js。
+已完成修改，将 `canLogin` 函数的三次失败限制从硬编码的常量改为使用 `loginLimit` 模块常量实现。运行了 `node tests/check.mjs all` 验证测试通过，无剩余问题。

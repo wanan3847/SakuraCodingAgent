@@ -1,0 +1,26 @@
+{
+  "id": "name-refactor",
+  "repo": {
+    "bundle": "../fixtures/token-refresh.bundle",
+    "commit": "a45a569aa00c067bc56f312f70d10a2f395e1d8d"
+  },
+  "task": {
+    "description": "重构 displayName，消除重复空格并保留 trim/空姓名的既有行为。",
+    "type": "refactor",
+    "hintFiles": [
+      "src/users/users.ts"
+    ]
+  },
+  "verification": {
+    "commands": [
+      "npm run typecheck",
+      "npm test"
+    ],
+    "readOnly": false
+  },
+  "limits": {
+    "timeoutMs": 600000
+  },
+  "baselineExpected": "fail",
+  "correctCommit": "618445df407d4405687a677a16fd34a59b69a41e"
+}

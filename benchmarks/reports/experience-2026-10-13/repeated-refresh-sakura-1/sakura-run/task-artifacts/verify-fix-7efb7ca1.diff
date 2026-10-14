@@ -1,0 +1,12 @@
+diff --git a/tests/check.mjs b/tests/check.mjs
+index f48079a3e9ae3b883db6233d604c4c231606d68a..01c5b9dfc16f6ca75609c23e02b6f12f2d67a9a1 100644
+--- a/tests/check.mjs
++++ b/tests/check.mjs
+@@ -7,6 +7,7 @@ const scenario=(await readFile('scenario.txt','utf8')).trim();
+ const fresh={value:'new',expires:20},old={value:'old',expires:10};
+ if(['auth-refresh','repeated-refresh','all'].includes(scenario)) assert.equal(refresh(old,fresh),fresh);
+ if(['expiry-boundary','all'].includes(scenario)) {assert.equal(expired(old,10),true);assert.equal(expired(fresh,10),false);}
++if(['expiry-boundary','all'].includes(scenario)) {assert.equal(expired(old,10),true);assert.equal(expired(fresh,10),false);}
+ if(['revoke-token','all'].includes(scenario)) assert.deepEqual(revoke([old,fresh],'old'),[fresh]);
+ if(['public-user','all'].includes(scenario)) assert.deepEqual(publicUser({name:'A',password:'secret'}),{name:'A'});
+ if(['name-refactor','all'].includes(scenario)) {assert.equal(displayName(' A ',' B '),'A B');assert.equal(displayName('','B'),'B');}

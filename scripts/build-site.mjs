@@ -1,0 +1,10 @@
+import {mkdir,copyFile,rm} from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
+import {join} from 'node:path';
+const root=fileURLToPath(new URL('../',import.meta.url)),target=join(root,'.sakura/site-dist');
+await mkdir(target,{recursive:true});
+for(const name of ['index.html','landing.css','landing.js','guide.html','license.txt'])await copyFile(join(root,'web',name),join(target,name));
+await mkdir(join(target,'assets'),{recursive:true});
+await copyFile(join(root,'web/assets/sakura-hero.png'),join(target,'assets/sakura-hero.png'));
+await rm(join(target,'flower.svg'),{force:true});
+console.log(`Sakura 静态项目网站：${target}\n可直接部署五个页面资源与一张首页图片；不包含运行记录、配置或工作台。`);

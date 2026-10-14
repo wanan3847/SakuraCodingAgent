@@ -1,0 +1,973 @@
+{
+  "method": "Pi public Theme ANSI → native xterm palette; sRGB contrast, assuming the documented theme background",
+  "reports": [
+    {
+      "name": "sakura-night",
+      "mode": "truecolor",
+      "checks": [
+        {
+          "foreground": "text",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 15.775236208829046
+        },
+        {
+          "foreground": "accent",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 9.753988108477175
+        },
+        {
+          "foreground": "error",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 7.966420109881725
+        },
+        {
+          "foreground": "success",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 10.886015630283696
+        },
+        {
+          "foreground": "warning",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 11.077555874356515
+        },
+        {
+          "foreground": "toolDiffAdded",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 10.886015630283696
+        },
+        {
+          "foreground": "toolDiffRemoved",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 7.966420109881725
+        },
+        {
+          "foreground": "syntaxKeyword",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 9.753988108477175
+        },
+        {
+          "foreground": "syntaxString",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 10.886015630283696
+        },
+        {
+          "foreground": "syntaxFunction",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 9.380698374641984
+        },
+        {
+          "foreground": "syntaxVariable",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 15.775236208829046
+        },
+        {
+          "foreground": "syntaxNumber",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 11.077555874356515
+        },
+        {
+          "foreground": "syntaxType",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 9.380698374641984
+        },
+        {
+          "foreground": "syntaxOperator",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 8.053902217502262
+        },
+        {
+          "foreground": "syntaxPunctuation",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 8.053902217502262
+        },
+        {
+          "foreground": "mdHeading",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 9.753988108477175
+        },
+        {
+          "foreground": "mdLink",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 9.380698374641984
+        },
+        {
+          "foreground": "mdCode",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 9.753988108477175
+        },
+        {
+          "foreground": "mdCodeBlock",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 15.775236208829046
+        },
+        {
+          "foreground": "mdListBullet",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 9.753988108477175
+        },
+        {
+          "foreground": "bashMode",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 10.886015630283696
+        },
+        {
+          "foreground": "muted",
+          "background": "page",
+          "minimum": 3,
+          "ratio": 8.053902217502262
+        },
+        {
+          "foreground": "dim",
+          "background": "page",
+          "minimum": 3,
+          "ratio": 5.2482891127057805
+        },
+        {
+          "foreground": "syntaxComment",
+          "background": "page",
+          "minimum": 3,
+          "ratio": 8.053902217502262
+        },
+        {
+          "foreground": "toolDiffContext",
+          "background": "page",
+          "minimum": 3,
+          "ratio": 8.053902217502262
+        },
+        {
+          "foreground": "thinkingText",
+          "background": "page",
+          "minimum": 3,
+          "ratio": 8.053902217502262
+        },
+        {
+          "foreground": "mdLinkUrl",
+          "background": "page",
+          "minimum": 3,
+          "ratio": 8.053902217502262
+        },
+        {
+          "foreground": "mdQuote",
+          "background": "page",
+          "minimum": 3,
+          "ratio": 8.053902217502262
+        },
+        {
+          "foreground": "text",
+          "background": "selectedBg",
+          "minimum": 4.5,
+          "ratio": 10.52737583987087
+        },
+        {
+          "foreground": "searchMatchText",
+          "background": "searchMatchBg",
+          "minimum": 4.5,
+          "ratio": 10.52737583987087
+        },
+        {
+          "foreground": "toolTitle",
+          "background": "toolPendingBg",
+          "minimum": 4.5,
+          "ratio": 14.087125398789553
+        },
+        {
+          "foreground": "toolOutput",
+          "background": "toolPendingBg",
+          "minimum": 4.5,
+          "ratio": 14.087125398789553
+        },
+        {
+          "foreground": "toolTitle",
+          "background": "toolSuccessBg",
+          "minimum": 4.5,
+          "ratio": 11.764363968965641
+        },
+        {
+          "foreground": "toolOutput",
+          "background": "toolSuccessBg",
+          "minimum": 4.5,
+          "ratio": 11.764363968965641
+        },
+        {
+          "foreground": "toolTitle",
+          "background": "toolErrorBg",
+          "minimum": 4.5,
+          "ratio": 12.496918539774828
+        },
+        {
+          "foreground": "toolOutput",
+          "background": "toolErrorBg",
+          "minimum": 4.5,
+          "ratio": 12.496918539774828
+        },
+        {
+          "foreground": "userMessageText",
+          "background": "userMessageBg",
+          "minimum": 4.5,
+          "ratio": 14.087125398789553
+        },
+        {
+          "foreground": "customMessageText",
+          "background": "customMessageBg",
+          "minimum": 4.5,
+          "ratio": 14.087125398789553
+        },
+        {
+          "foreground": "customMessageLabel",
+          "background": "customMessageBg",
+          "minimum": 4.5,
+          "ratio": 8.710212120026272
+        }
+      ],
+      "passed": true,
+      "ansiSample": "\u001b[48;2;60;34;45m\u001b[38;2;243;143;154m失败：检查退出码 1\u001b[39m\u001b[49m"
+    },
+    {
+      "name": "sakura-night",
+      "mode": "256color",
+      "checks": [
+        {
+          "foreground": "text",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 16.146502243056023
+        },
+        {
+          "foreground": "accent",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 11.030781126765731
+        },
+        {
+          "foreground": "error",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 8.088877704991466
+        },
+        {
+          "foreground": "success",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 11.034470503981307
+        },
+        {
+          "foreground": "warning",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 12.45293010976625
+        },
+        {
+          "foreground": "toolDiffAdded",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 11.034470503981307
+        },
+        {
+          "foreground": "toolDiffRemoved",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 8.088877704991466
+        },
+        {
+          "foreground": "syntaxKeyword",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 11.030781126765731
+        },
+        {
+          "foreground": "syntaxString",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 11.034470503981307
+        },
+        {
+          "foreground": "syntaxFunction",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 9.276536454315618
+        },
+        {
+          "foreground": "syntaxVariable",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 16.146502243056023
+        },
+        {
+          "foreground": "syntaxNumber",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 12.45293010976625
+        },
+        {
+          "foreground": "syntaxType",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 9.276536454315618
+        },
+        {
+          "foreground": "syntaxOperator",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 8.540597025788097
+        },
+        {
+          "foreground": "syntaxPunctuation",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 8.540597025788097
+        },
+        {
+          "foreground": "mdHeading",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 11.030781126765731
+        },
+        {
+          "foreground": "mdLink",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 9.276536454315618
+        },
+        {
+          "foreground": "mdCode",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 11.030781126765731
+        },
+        {
+          "foreground": "mdCodeBlock",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 16.146502243056023
+        },
+        {
+          "foreground": "mdListBullet",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 11.030781126765731
+        },
+        {
+          "foreground": "bashMode",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 11.034470503981307
+        },
+        {
+          "foreground": "muted",
+          "background": "page",
+          "minimum": 3,
+          "ratio": 8.540597025788097
+        },
+        {
+          "foreground": "dim",
+          "background": "page",
+          "minimum": 3,
+          "ratio": 5.454883942978496
+        },
+        {
+          "foreground": "syntaxComment",
+          "background": "page",
+          "minimum": 3,
+          "ratio": 8.540597025788097
+        },
+        {
+          "foreground": "toolDiffContext",
+          "background": "page",
+          "minimum": 3,
+          "ratio": 8.540597025788097
+        },
+        {
+          "foreground": "thinkingText",
+          "background": "page",
+          "minimum": 3,
+          "ratio": 8.540597025788097
+        },
+        {
+          "foreground": "mdLinkUrl",
+          "background": "page",
+          "minimum": 3,
+          "ratio": 8.540597025788097
+        },
+        {
+          "foreground": "mdQuote",
+          "background": "page",
+          "minimum": 3,
+          "ratio": 8.540597025788097
+        },
+        {
+          "foreground": "text",
+          "background": "selectedBg",
+          "minimum": 4.5,
+          "ratio": 5.5036370037782
+        },
+        {
+          "foreground": "searchMatchText",
+          "background": "searchMatchBg",
+          "minimum": 4.5,
+          "ratio": 5.5036370037782
+        },
+        {
+          "foreground": "toolTitle",
+          "background": "toolPendingBg",
+          "minimum": 4.5,
+          "ratio": 18.099852162484677
+        },
+        {
+          "foreground": "toolOutput",
+          "background": "toolPendingBg",
+          "minimum": 4.5,
+          "ratio": 18.099852162484677
+        },
+        {
+          "foreground": "toolTitle",
+          "background": "toolSuccessBg",
+          "minimum": 4.5,
+          "ratio": 6.864107407016709
+        },
+        {
+          "foreground": "toolOutput",
+          "background": "toolSuccessBg",
+          "minimum": 4.5,
+          "ratio": 6.864107407016709
+        },
+        {
+          "foreground": "toolTitle",
+          "background": "toolErrorBg",
+          "minimum": 4.5,
+          "ratio": 12.175504706824714
+        },
+        {
+          "foreground": "toolOutput",
+          "background": "toolErrorBg",
+          "minimum": 4.5,
+          "ratio": 12.175504706824714
+        },
+        {
+          "foreground": "userMessageText",
+          "background": "userMessageBg",
+          "minimum": 4.5,
+          "ratio": 18.099852162484677
+        },
+        {
+          "foreground": "customMessageText",
+          "background": "customMessageBg",
+          "minimum": 4.5,
+          "ratio": 18.099852162484677
+        },
+        {
+          "foreground": "customMessageLabel",
+          "background": "customMessageBg",
+          "minimum": 4.5,
+          "ratio": 12.365248189715508
+        }
+      ],
+      "passed": true,
+      "ansiSample": "\u001b[48;5;52m\u001b[38;5;210m失败：检查退出码 1\u001b[39m\u001b[49m"
+    },
+    {
+      "name": "sakura-light",
+      "mode": "truecolor",
+      "checks": [
+        {
+          "foreground": "text",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 13.868836816745262
+        },
+        {
+          "foreground": "accent",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 5.993492515668639
+        },
+        {
+          "foreground": "error",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 6.217298639657323
+        },
+        {
+          "foreground": "success",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 6.416153832483485
+        },
+        {
+          "foreground": "warning",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 5.839815930538106
+        },
+        {
+          "foreground": "toolDiffAdded",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 6.416153832483485
+        },
+        {
+          "foreground": "toolDiffRemoved",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 6.217298639657323
+        },
+        {
+          "foreground": "syntaxKeyword",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 5.993492515668639
+        },
+        {
+          "foreground": "syntaxString",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 6.416153832483485
+        },
+        {
+          "foreground": "syntaxFunction",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 6.150187663717953
+        },
+        {
+          "foreground": "syntaxVariable",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 13.868836816745262
+        },
+        {
+          "foreground": "syntaxNumber",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 5.839815930538106
+        },
+        {
+          "foreground": "syntaxType",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 6.150187663717953
+        },
+        {
+          "foreground": "syntaxOperator",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 5.429587130257663
+        },
+        {
+          "foreground": "syntaxPunctuation",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 5.429587130257663
+        },
+        {
+          "foreground": "mdHeading",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 5.993492515668639
+        },
+        {
+          "foreground": "mdLink",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 6.150187663717953
+        },
+        {
+          "foreground": "mdCode",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 5.993492515668639
+        },
+        {
+          "foreground": "mdCodeBlock",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 13.868836816745262
+        },
+        {
+          "foreground": "mdListBullet",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 5.993492515668639
+        },
+        {
+          "foreground": "bashMode",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 6.416153832483485
+        },
+        {
+          "foreground": "muted",
+          "background": "page",
+          "minimum": 3,
+          "ratio": 5.429587130257663
+        },
+        {
+          "foreground": "dim",
+          "background": "page",
+          "minimum": 3,
+          "ratio": 4.316638296049337
+        },
+        {
+          "foreground": "syntaxComment",
+          "background": "page",
+          "minimum": 3,
+          "ratio": 5.429587130257663
+        },
+        {
+          "foreground": "toolDiffContext",
+          "background": "page",
+          "minimum": 3,
+          "ratio": 5.429587130257663
+        },
+        {
+          "foreground": "thinkingText",
+          "background": "page",
+          "minimum": 3,
+          "ratio": 5.429587130257663
+        },
+        {
+          "foreground": "mdLinkUrl",
+          "background": "page",
+          "minimum": 3,
+          "ratio": 5.429587130257663
+        },
+        {
+          "foreground": "mdQuote",
+          "background": "page",
+          "minimum": 3,
+          "ratio": 5.429587130257663
+        },
+        {
+          "foreground": "text",
+          "background": "selectedBg",
+          "minimum": 4.5,
+          "ratio": 10.700281455389138
+        },
+        {
+          "foreground": "searchMatchText",
+          "background": "searchMatchBg",
+          "minimum": 4.5,
+          "ratio": 10.700281455389138
+        },
+        {
+          "foreground": "toolTitle",
+          "background": "toolPendingBg",
+          "minimum": 4.5,
+          "ratio": 12.399851563019995
+        },
+        {
+          "foreground": "toolOutput",
+          "background": "toolPendingBg",
+          "minimum": 4.5,
+          "ratio": 12.399851563019995
+        },
+        {
+          "foreground": "toolTitle",
+          "background": "toolSuccessBg",
+          "minimum": 4.5,
+          "ratio": 12.387499214016781
+        },
+        {
+          "foreground": "toolOutput",
+          "background": "toolSuccessBg",
+          "minimum": 4.5,
+          "ratio": 12.387499214016781
+        },
+        {
+          "foreground": "toolTitle",
+          "background": "toolErrorBg",
+          "minimum": 4.5,
+          "ratio": 11.803681843018305
+        },
+        {
+          "foreground": "toolOutput",
+          "background": "toolErrorBg",
+          "minimum": 4.5,
+          "ratio": 11.803681843018305
+        },
+        {
+          "foreground": "userMessageText",
+          "background": "userMessageBg",
+          "minimum": 4.5,
+          "ratio": 12.399851563019995
+        },
+        {
+          "foreground": "customMessageText",
+          "background": "customMessageBg",
+          "minimum": 4.5,
+          "ratio": 12.399851563019995
+        },
+        {
+          "foreground": "customMessageLabel",
+          "background": "customMessageBg",
+          "minimum": 4.5,
+          "ratio": 8.173212857806949
+        }
+      ],
+      "passed": true,
+      "ansiSample": "\u001b[48;2;249;226;233m\u001b[38;2;175;41;70m失败：检查退出码 1\u001b[39m\u001b[49m"
+    },
+    {
+      "name": "sakura-light",
+      "mode": "256color",
+      "checks": [
+        {
+          "foreground": "text",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 12.713219693574471
+        },
+        {
+          "foreground": "accent",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 4.540618827063379
+        },
+        {
+          "foreground": "error",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 7.0280261955758245
+        },
+        {
+          "foreground": "success",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 7.494303614544813
+        },
+        {
+          "foreground": "warning",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 5.726653853083443
+        },
+        {
+          "foreground": "toolDiffAdded",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 7.494303614544813
+        },
+        {
+          "foreground": "toolDiffRemoved",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 7.0280261955758245
+        },
+        {
+          "foreground": "syntaxKeyword",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 4.540618827063379
+        },
+        {
+          "foreground": "syntaxString",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 7.494303614544813
+        },
+        {
+          "foreground": "syntaxFunction",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 5.611234628662402
+        },
+        {
+          "foreground": "syntaxVariable",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 12.713219693574471
+        },
+        {
+          "foreground": "syntaxNumber",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 5.726653853083443
+        },
+        {
+          "foreground": "syntaxType",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 5.611234628662402
+        },
+        {
+          "foreground": "syntaxOperator",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 6.385487353255615
+        },
+        {
+          "foreground": "syntaxPunctuation",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 6.385487353255615
+        },
+        {
+          "foreground": "mdHeading",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 4.540618827063379
+        },
+        {
+          "foreground": "mdLink",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 5.611234628662402
+        },
+        {
+          "foreground": "mdCode",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 4.540618827063379
+        },
+        {
+          "foreground": "mdCodeBlock",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 12.713219693574471
+        },
+        {
+          "foreground": "mdListBullet",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 4.540618827063379
+        },
+        {
+          "foreground": "bashMode",
+          "background": "page",
+          "minimum": 4.5,
+          "ratio": 7.494303614544813
+        },
+        {
+          "foreground": "muted",
+          "background": "page",
+          "minimum": 3,
+          "ratio": 6.385487353255615
+        },
+        {
+          "foreground": "dim",
+          "background": "page",
+          "minimum": 3,
+          "ratio": 5.227890127628129
+        },
+        {
+          "foreground": "syntaxComment",
+          "background": "page",
+          "minimum": 3,
+          "ratio": 6.385487353255615
+        },
+        {
+          "foreground": "toolDiffContext",
+          "background": "page",
+          "minimum": 3,
+          "ratio": 6.385487353255615
+        },
+        {
+          "foreground": "thinkingText",
+          "background": "page",
+          "minimum": 3,
+          "ratio": 6.385487353255615
+        },
+        {
+          "foreground": "mdLinkUrl",
+          "background": "page",
+          "minimum": 3,
+          "ratio": 6.385487353255615
+        },
+        {
+          "foreground": "mdQuote",
+          "background": "page",
+          "minimum": 3,
+          "ratio": 6.385487353255615
+        },
+        {
+          "foreground": "text",
+          "background": "selectedBg",
+          "minimum": 4.5,
+          "ratio": 8.833174944988956
+        },
+        {
+          "foreground": "searchMatchText",
+          "background": "searchMatchBg",
+          "minimum": 4.5,
+          "ratio": 8.833174944988956
+        },
+        {
+          "foreground": "toolTitle",
+          "background": "toolPendingBg",
+          "minimum": 4.5,
+          "ratio": 9.938211689386112
+        },
+        {
+          "foreground": "toolOutput",
+          "background": "toolPendingBg",
+          "minimum": 4.5,
+          "ratio": 9.938211689386112
+        },
+        {
+          "foreground": "toolTitle",
+          "background": "toolSuccessBg",
+          "minimum": 4.5,
+          "ratio": 11.608182949177316
+        },
+        {
+          "foreground": "toolOutput",
+          "background": "toolSuccessBg",
+          "minimum": 4.5,
+          "ratio": 11.608182949177316
+        },
+        {
+          "foreground": "toolTitle",
+          "background": "toolErrorBg",
+          "minimum": 4.5,
+          "ratio": 9.658072458538237
+        },
+        {
+          "foreground": "toolOutput",
+          "background": "toolErrorBg",
+          "minimum": 4.5,
+          "ratio": 9.658072458538237
+        },
+        {
+          "foreground": "userMessageText",
+          "background": "userMessageBg",
+          "minimum": 4.5,
+          "ratio": 9.938211689386112
+        },
+        {
+          "foreground": "customMessageText",
+          "background": "customMessageBg",
+          "minimum": 4.5,
+          "ratio": 9.938211689386112
+        },
+        {
+          "foreground": "customMessageLabel",
+          "background": "customMessageBg",
+          "minimum": 4.5,
+          "ratio": 7.477451003515329
+        }
+      ],
+      "passed": true,
+      "ansiSample": "\u001b[48;5;224m\u001b[38;5;125m失败：检查退出码 1\u001b[39m\u001b[49m"
+    }
+  ]
+}

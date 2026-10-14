@@ -1,0 +1,26 @@
+{
+  "id": "public-user",
+  "repo": {
+    "bundle": "../fixtures/token-refresh.bundle",
+    "commit": "9ea71ed303eeeeb704a4d3a46dcd8bd121b38262"
+  },
+  "task": {
+    "description": "修复 publicUser 导出密码字段的问题，保留公开姓名。",
+    "type": "bugfix",
+    "hintFiles": [
+      "src/users/users.ts"
+    ]
+  },
+  "verification": {
+    "commands": [
+      "npm run typecheck",
+      "npm test"
+    ],
+    "readOnly": false
+  },
+  "limits": {
+    "timeoutMs": 600000
+  },
+  "baselineExpected": "fail",
+  "correctCommit": "618445df407d4405687a677a16fd34a59b69a41e"
+}

@@ -1,0 +1,51 @@
+import assert from 'node:assert/strict';
+import {test} from 'node:test';
+import {mkdtemp,mkdir,writeFile,readFile,rm,symlink} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import {join,resolve} from 'node:path';
+import {execFile} from 'node:child_process';
+import {promisify} from 'node:util';
+import {request} from 'node:http';
+import {createDashboardServer} from '../../src/web/server.ts';
+const exec=promisify(execFile),root=resolve(new URL('../../',import.meta.url).pathname);
+test('standalone profile excludes target Pi resources and settings without modifying them',async t=>{
+ const temp=await mkdtemp(join(tmpdir(),'sakura-isolation-'));t.after(()=>rm(temp,{recursive:true,force:true}));
+ const project=join(temp,'project'),profile=join(temp,'sakura-home'),legacy=join(temp,'pi-home');
+ await mkdir(join(project,'.pi/extensions'),{recursive:true});await mkdir(legacy);
+ const source=JSON.stringify({defaultModel:'foreign-model',theme:'foreign-theme',extensions:['./extensions/foreign.ts']});
+ await writeFile(join(project,'.pi/settings.json'),source);await writeFile(join(project,'.pi/extensions/foreign.ts'),"export default function(){throw new Error('Foreign Pi extension loaded');}");
+ await exec(process.execPath,[join(root,'bin/sakura.mjs'),'--home',profile,'init','fixture','--offline']);
+ const result=JSON.parse((await exec(process.execPath,[join(root,'bin/sakura.mjs'),'--home',profile,'doctor','--project',project],{env:{...process.env,PI_CODING_AGENT_DIR:legacy}})).stdout);
+ assert.equal(result.agentDir,join(profile,'agent'));assert.equal(result.sessions,join(profile,'agent/sessions'));assert.deepEqual(result.projectSettings,{});assert.equal(result.extensions,9);assert.deepEqual(result.extensionErrors,[]);assert.equal(result.skills.length,5);assert.equal(result.prompts.length,2);assert.equal(result.models[0].id,'fixture');assert.ok(result.commands.includes('plan'));assert.ok(result.commands.includes('subagent'));assert.ok(result.commands.includes('run'));assert.ok(result.commands.includes('sakura-plan'));assert.ok(!result.commands.includes('resume'));assert.equal(await readFile(join(project,'.pi/settings.json'),'utf8'),source);
+});
+test('dashboard reads actual checkpoints, diffs and trace usage; refuses foreign origins and path escape',async t=>{
+ const temp=await mkdtemp(join(tmpdir(),'sakura-dashboard-'));t.after(()=>rm(temp,{recursive:true,force:true}));
+ const project=join(temp,'project'),run=join(project,'.sakura/runs/run-one');await mkdir(join(run,'diffs'),{recursive:true});
+ const state={runId:'run-one',phase:'ready_to_apply',startedAt:100,endedAt:200,graph:{rootTask:'真实任务 <script>',nodes:{fix:{id:'fix',role:'implementer',status:'succeeded',dependencies:[]}}},verification:[{at:180,passed:true,commands:['npm test'],failures:[]}]};
+ await writeFile(join(run,'state.json'),JSON.stringify(state));await writeFile(join(run,'events.jsonl'),JSON.stringify({seq:1,at:120,event:{type:'task.started',taskId:'fix',agentId:'implementer'}})+'\n'+JSON.stringify({seq:2,at:160,event:{type:'task.usage',taskId:'fix',agentId:'implementer',tokensIn:42,tokensOut:7}})+'\n');
+ await writeFile(join(run,'diffs/change.diff'),'-old\n+new\n');await writeFile(join(temp,'secret.txt'),'private');await symlink(join(temp,'secret.txt'),join(run,'diffs/escape.diff'));
+ const previous=process.env.SAKURA_HOME;process.env.SAKURA_HOME=join(temp,'profile');t.after(()=>{if(previous===undefined)delete process.env.SAKURA_HOME;else process.env.SAKURA_HOME=previous;});
+ const server=await createDashboardServer({project});await new Promise<void>(accept=>server.listen(0,'127.0.0.1',accept));t.after(()=>new Promise<void>((accept,reject)=>{server.closeAllConnections();server.close(error=>error?reject(error):accept());}));const address=server.address();assert.ok(address&&typeof address==='object');const url=`http://127.0.0.1:${address.port}`;
+ const overview=await fetch(url+'/api/overview').then(r=>r.json());assert.equal(overview.runs.length,1);assert.equal(overview.runs[0].metrics.tokensIn,42);assert.equal(overview.runs[0].metrics.agents,1);
+ const detail=await fetch(url+'/api/runs/'+overview.runs[0].key).then(r=>r.json());assert.equal(detail.task,state.graph.rootTask);assert.ok(detail.diffs.some((d:{text:string})=>d.text.includes('+new')));assert.ok(detail.diffs.every((d:{text:string})=>!d.text.includes('private')));
+ const status=async(path:string,options?:RequestInit)=>{const response=await fetch(url+path,options);await response.arrayBuffer();return response.status;};
+ assert.equal(await status('/api/overview',{headers:{Origin:'https://foreign.example'}}),403);
+ const foreignHost=await new Promise<number|undefined>((accept,reject)=>{const req=request(url+'/api/overview',{headers:{Host:'foreign.example'}},res=>{res.resume();res.on('end',()=>accept(res.statusCode));});req.on('error',reject);req.end();});assert.equal(foreignHost,403);
+ assert.equal(await status('/api/overview',{method:'POST'}),405);assert.equal(await status('/api/runs/not-a-run'),404);assert.equal(await status('/secret.txt'),404);
+ const homepage=await fetch(url).then(response=>response.text());assert.ok(homepage.includes('先理解代码。'));assert.ok(!homepage.includes('任务工作台'));assert.equal(await status('/landing.css'),200);assert.equal(await status('/guide.html'),200);const workbench=await fetch(url+'/workbench').then(response=>response.text());assert.ok(workbench.includes('/workbench/app.js'));
+});
+
+test('Pi package resources load from the Sakura profile and uninstall without changing target Pi settings',async t=>{
+ const temp=await mkdtemp(join(tmpdir(),'sakura-ecosystem-'));t.after(()=>rm(temp,{recursive:true,force:true}));
+ const profile=join(temp,'profile'),project=join(temp,'project'),addon=join(temp,'addon');
+ await mkdir(join(project,'.pi'),{recursive:true});const targetSettings=JSON.stringify({packages:['do-not-load-this-package']});await writeFile(join(project,'.pi/settings.json'),targetSettings);
+ for(const dir of ['extensions','skills/fixture-skill','prompts','themes'])await mkdir(join(addon,dir),{recursive:true});
+ await writeFile(join(addon,'package.json'),JSON.stringify({name:'sakura-ecosystem-fixture',version:'1.0.0',pi:{extensions:['extensions/hello.ts'],skills:['skills'],prompts:['prompts'],themes:['themes']}}));
+ await writeFile(join(addon,'extensions/hello.ts'),`export default function(pi){pi.registerCommand('ecosystem-hello',{description:'fixture',handler:async(args,ctx)=>ctx.ui.notify('hello','info')});pi.registerTool({name:'ecosystem_hello',label:'Hello',description:'fixture',parameters:{type:'object',properties:{}},execute:async()=>({content:[{type:'text',text:'hello'}],details:{}})});}`);
+ await writeFile(join(addon,'skills/fixture-skill/SKILL.md'),'---\nname: fixture-skill\ndescription: Fixture ecosystem skill for testing resource loading.\n---\nFixture skill body.\n');
+ await writeFile(join(addon,'prompts/fixture-prompt.md'),'Fixture prompt.\n');const theme=JSON.parse(await readFile(join(root,'themes/sakura-light.json'),'utf8'));theme.name='fixture-theme';await writeFile(join(addon,'themes/fixture-theme.json'),JSON.stringify(theme));
+ const run=(args:string[])=>exec(process.execPath,[join(root,'bin/sakura.mjs'),'--home',profile,...args],{cwd:project,timeout:30000});
+ await run(['init','fixture','--offline']);await run(['install',addon]);
+ const result=JSON.parse((await run(['doctor'])).stdout);assert.equal(result.extensions,10);assert.deepEqual(result.extensionErrors,[]);assert.ok(result.commands.includes('ecosystem-hello'));assert.ok(result.tools.includes('ecosystem_hello'));assert.ok(result.skills.includes('fixture-skill'));assert.ok(result.prompts.includes('fixture-prompt'));assert.ok(result.themes.includes('fixture-theme'));assert.equal(await readFile(join(project,'.pi/settings.json'),'utf8'),targetSettings);
+ const packages=JSON.parse((await run(['packages'])).stdout);assert.ok(packages.some((item:{installedPath:string})=>item.installedPath===addon));await run(['remove',addon]);const removed=JSON.parse((await run(['doctor'])).stdout);assert.equal(removed.extensions,9);assert.ok(!removed.skills.includes('fixture-skill'));assert.equal(await readFile(join(project,'.pi/settings.json'),'utf8'),targetSettings);
+});

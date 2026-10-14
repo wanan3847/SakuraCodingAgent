@@ -1,0 +1,27 @@
+{
+  "id": "dependency-module",
+  "repo": {
+    "bundle": "../fixtures/token-refresh.bundle",
+    "commit": "cf3be6f799027a1f735a72329241cf134693acd2"
+  },
+  "task": {
+    "description": "新增 src/auth/login-policy.ts 的 loginLimit=3，并让 canLogin 导入并使用该模块；保持第三次失败后拒绝。",
+    "type": "feature",
+    "hintFiles": [
+      "src/auth/auth-service.ts",
+      "src/auth/login-policy.ts"
+    ]
+  },
+  "verification": {
+    "commands": [
+      "npm run typecheck",
+      "npm test"
+    ],
+    "readOnly": false
+  },
+  "limits": {
+    "timeoutMs": 600000
+  },
+  "baselineExpected": "fail",
+  "correctCommit": "618445df407d4405687a677a16fd34a59b69a41e"
+}

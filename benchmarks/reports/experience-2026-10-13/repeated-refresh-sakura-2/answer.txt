@@ -1,0 +1,1 @@
+模型自述（执行事实以工具轨迹和外层检查为准）：修复了 `refresh` 函数使其返回新 token，通过运行 `node tests/check.mjs scenario=auth-refresh` 验证，问题已解决。

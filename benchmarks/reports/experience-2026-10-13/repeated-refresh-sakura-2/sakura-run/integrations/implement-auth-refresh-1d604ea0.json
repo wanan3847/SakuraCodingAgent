@@ -1,0 +1,10 @@
+{
+  "createdAt": 1791853256781,
+  "id": "implement-auth-refresh-1d604ea0",
+  "taskId": "implement-auth-refresh",
+  "workspacePath": "/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-benchmark-trial-enzhKX/.sakura/worktrees/implement-auth-refresh-1d604ea0",
+  "baseCommit": "146a403d6db8777aa95950cb892ec18f6cdc1e5e",
+  "status": "failed",
+  "artifactPath": "/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-benchmark-trial-enzhKX/.sakura/runs/run-mv5z21cz-97b4b8f3/task-artifacts/implement-auth-refresh-1d604ea0.json",
+  "error": "implement-auth-refresh: 写角色没有改动任何文件（workspace: /var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-benchmark-trial-enzhKX/.sakura/worktrees/implement-auth-refresh-1d604ea0）"
+}

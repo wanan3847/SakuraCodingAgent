@@ -1,0 +1,1 @@
+一句话总结：修改了 publicUser 函数使其只返回包含 name 的对象，不泄露 password；运行了 tests/check.mjs 验证 public-user 场景测试通过。

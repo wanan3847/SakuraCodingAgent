@@ -1,0 +1,33 @@
+{
+  "at": "2026-10-13T01:10:18.089Z",
+  "checks": [
+    {
+      "width": 40,
+      "file": ".sakura/release/tui-plain-40.log",
+      "maxVisibleWidth": 40,
+      "brand": true,
+      "plainNativePanels": true,
+      "noEmoji": true,
+      "longChinesePlan": true
+    },
+    {
+      "width": 80,
+      "file": ".sakura/release/tui-plain-80.log",
+      "maxVisibleWidth": 80,
+      "brand": true,
+      "plainNativePanels": true,
+      "noEmoji": true,
+      "longChinesePlan": true
+    },
+    {
+      "width": 120,
+      "file": ".sakura/release/tui-120.log",
+      "maxVisibleWidth": 120,
+      "brand": true,
+      "plainNativePanels": true,
+      "noEmoji": true,
+      "longChinesePlan": true
+    }
+  ],
+  "scope": "Native Pi 1.1.0 final frames on this macOS terminal. Startup redraws may contain the previously selected theme; NO_COLOR takes effect at session_start. Control sequences are necessary for TUI operation."
+}

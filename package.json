@@ -1,0 +1,92 @@
+{
+  "name": "sakura-coding-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "scripts": {
+    "start": "node bin/sakura.mjs",
+    "sakura": "node bin/sakura.mjs",
+    "init": "node bin/sakura.mjs init",
+    "web": "node bin/sakura.mjs web",
+    "dev": "node src/cli/dev.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "node --test \"tests/unit/*.test.ts\" \"tests/integration/*.test.ts\"",
+    "test:unit": "node --test \"tests/unit/*.test.ts\"",
+    "check": "npm run typecheck && npm test",
+    "check:plugin": "node scripts/check-plugin.mjs",
+    "check:install": "node scripts/check-installed-package.mjs",
+    "check:standalone": "node scripts/check-standalone-install.mjs",
+    "check:pi-update": "node scripts/check-pi-update.mjs",
+    "pack": "node scripts/pack.mjs",
+    "app": "node scripts/install-app.mjs",
+    "release": "node scripts/release.mjs",
+    "site:build": "node scripts/build-site.mjs"
+  },
+  "dependencies": {
+    "typescript": "5.9.3",
+    "yaml": "2.9.0",
+    "@earendil-works/pi-ai": "1.1.0",
+    "@earendil-works/pi-coding-agent": "1.1.0",
+    "@earendil-works/pi-tui": "1.1.0",
+    "jiti": "2.7.0",
+    "typebox": "1.3.27",
+    "@earendil-works/pi-codemode": "1.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.3"
+  },
+  "description": "Sakura Coding Agent —— 基于 Pi Runtime 的多智能体软件工程 Agent：Dynamic Planning / Multi-Agent Orchestrator / Repo Intelligence / Worktree+Sandbox / Experience，Verification 作为公共闭环",
+  "license": "MIT",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "pi-coding-agent",
+    "ai",
+    "agent",
+    "multi-agent",
+    "orchestrator",
+    "planning",
+    "coding-agent"
+  ],
+  "pi": {
+    "extensions": [
+      "./extensions/sakura-planning.ts",
+      "./extensions/sakura-orchestrator.ts",
+      "./extensions/sakura-repo.ts",
+      "./extensions/sakura-workspace.ts",
+      "./extensions/sakura-experience.ts",
+      "./extensions/sakura-subagent.ts"
+    ],
+    "skills": [
+      "./skills"
+    ],
+    "prompts": [
+      "./prompts"
+    ],
+    "themes": [
+      "./themes"
+    ]
+  },
+  "files": [
+    "extensions",
+    "skills",
+    "prompts",
+    "src",
+    "docs",
+    "benchmarks/reports/release-2026-10-13",
+    "benchmarks/reports/skill-security-2026-10-13",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "themes",
+    "bin",
+    "web",
+    "benchmarks/reports/candidate-effect-2026-10-13"
+  ],
+  "bin": {
+    "sakura": "bin/sakura.mjs"
+  }
+}

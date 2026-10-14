@@ -1,0 +1,78 @@
+{
+  "at": "2026-10-13T01:09:25.314Z",
+  "reportSha256": "235498a3227e16cf5cc8a2b136952770f56f21e643e0a4b31c1947baa2b3124f",
+  "rows": [
+    {
+      "variant": "no-experience",
+      "repeat": 1,
+      "status": "passed",
+      "durationMs": 244077,
+      "tokensIn": 72165,
+      "tokensOut": 3243,
+      "toolCalls": 16,
+      "experienceIds": []
+    },
+    {
+      "variant": "sakura",
+      "repeat": 1,
+      "status": "passed",
+      "durationMs": 161161,
+      "tokensIn": 48961,
+      "tokensOut": 1635,
+      "toolCalls": 10,
+      "experienceIds": [
+        "plan-run-mv5w1y9y-dc91d70c-v1"
+      ]
+    },
+    {
+      "variant": "no-experience",
+      "repeat": 2,
+      "status": "cancelled",
+      "durationMs": 601915,
+      "tokensIn": 232448,
+      "tokensOut": 6913,
+      "toolCalls": 53,
+      "experienceIds": []
+    },
+    {
+      "variant": "sakura",
+      "repeat": 2,
+      "status": "passed",
+      "durationMs": 216326,
+      "tokensIn": 93480,
+      "tokensOut": 2103,
+      "toolCalls": 26,
+      "experienceIds": [
+        "plan-run-mv5w1y9y-dc91d70c-v1"
+      ]
+    },
+    {
+      "variant": "no-experience",
+      "repeat": 3,
+      "status": "passed",
+      "durationMs": 34468,
+      "tokensIn": 21220,
+      "tokensOut": 538,
+      "toolCalls": 5,
+      "experienceIds": []
+    },
+    {
+      "variant": "sakura",
+      "repeat": 3,
+      "status": "passed",
+      "durationMs": 125372,
+      "tokensIn": 38445,
+      "tokensOut": 1150,
+      "toolCalls": 9,
+      "experienceIds": [
+        "plan-run-mv5w1y9y-dc91d70c-v1"
+      ]
+    }
+  ],
+  "limitations": [
+    "Three repeats of one task cannot establish general benefit.",
+    "Original runner labels the 600-second timeout as cancelled; it remains a non-pass in statistics.",
+    "This historical runner predates indexing-read/replan-retry corrections; filesRead/retries are not used for benefit claims.",
+    "Original source fingerprint is preserved, but this historical run did not archive source files."
+  ]
+}

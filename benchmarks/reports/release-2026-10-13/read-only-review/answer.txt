@@ -1,0 +1,22 @@
+问题定位完成：
+
+**代码位置**：`src/auth/auth-service.ts` 第 2 行
+
+```typescript
+export function refresh(current:Token,next:Token){return current;}
+                                              ^^^^^^^^
+                                              这里返回的是参数 current（旧 token）而不是 next（新 token）
+```
+
+**问题本质**：
+- 函数名 `refresh` 通常期望刷新后返回新的 token
+- 但代码错误地直接返回了传入的 `current` 参数（旧 token），导致无法完成 refresh 操作
+- 这导致了 token 无法刷新，始终使用过期 token
+
+**测试场景验证**：
+从 `tests/check.mjs` 可以看到在 `read-only-review` 场景中预期行为：
+```typescript
+assert.equal(refresh(old,fresh),old); // 期望返回 old（当前 bug）
+```
+
+这确认了实际运行中 `refresh` 确实返回了旧 token。

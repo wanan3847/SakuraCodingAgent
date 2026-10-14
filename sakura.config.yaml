@@ -1,0 +1,39 @@
+# sakura.config.yaml —— 架构文档 §25。放仓库根目录，缺省即 DEFAULT_CONFIG（src/config.ts）。
+runtime:
+  maxConcurrency: 3
+  taskTimeoutMs: 600000
+  # true = 只允许 Pi 配置的 loopback 模型端点；要云端模型显式设 false
+  localOnly: true
+
+planning:
+  maxTasks: 12
+  maxReplans: 3
+
+repository:
+  maxIndexedFileSizeKb: 512
+  indexOnRun: true
+
+context:
+  topKFiles: 12
+
+workspace:
+  # worktree = 整轮任务一个 git worktree；独立 delegate 写任务各自 worktree；in-place = 直接改当前工作区（调试用）
+  mode: worktree
+  cleanup: true
+
+verification:
+  requireDiffReview: true
+  requireTestsWhenAvailable: true
+
+policy:
+  gitPush: approval
+  externalWrite: deny
+  network: approval
+
+experience:
+  enabled: true
+  # 架构文档 §15：永远不要让模型自动改正式 Skill
+  autoCreateSkill: false
+
+trace:
+  dir: .sakura/runs

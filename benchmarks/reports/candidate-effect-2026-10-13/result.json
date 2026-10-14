@@ -1,0 +1,465 @@
+{
+  "stage": "assessed",
+  "sourceSha256": "d300719aa848fbf505d0a2688f964f92a150416412180761d013172dc1b0600b",
+  "driverSha256": "96f46514529e7d96fd1887a7cd56d982c637ad50b7d1f53926cc558df44cb77e",
+  "model": "ollama/sakura-bench-qwen35-4b",
+  "planned": 18,
+  "effect": {
+    "sha256": "5628ed53ee7bc8a5e29f052764ca493124cb2c5d1b76263ee3a816956b7fd1cc",
+    "pairs": [
+      {
+        "baselineRunId": "run-mv66n8ct-b469fe4b",
+        "candidateRunId": "run-mv66nwaz-0a136266"
+      },
+      {
+        "baselineRunId": "run-mv66sqdz-ef3c4f44",
+        "candidateRunId": "run-mv671i2v-631f7b6b"
+      },
+      {
+        "baselineRunId": "run-mv672dp1-a8918750",
+        "candidateRunId": "run-mv676a1o-acb97950"
+      },
+      {
+        "baselineRunId": "run-mv677qrh-0781ca91",
+        "candidateRunId": "run-mv678fxq-d020ef01"
+      },
+      {
+        "baselineRunId": "run-mv67bli5-a46020f9",
+        "candidateRunId": "run-mv67gset-72ea31ef"
+      },
+      {
+        "baselineRunId": "run-mv67jdoo-0b2ddb78",
+        "candidateRunId": "run-mv67mviq-3d119100"
+      },
+      {
+        "baselineRunId": "run-mv67obvp-57f9b06c",
+        "candidateRunId": "run-mv67t0xg-bdbb1ea3"
+      },
+      {
+        "baselineRunId": "run-mv67wqpe-97b5ba9c",
+        "candidateRunId": "run-mv67zhz1-4a307552"
+      },
+      {
+        "baselineRunId": "run-mv689c3m-7e9a6e80",
+        "candidateRunId": "run-mv68czyh-fba023c2"
+      }
+    ],
+    "baseline": {
+      "runs": 9,
+      "passed": 9,
+      "toolCalls": 158,
+      "tokens": 597642,
+      "durationMs": 1570005
+    },
+    "candidate": {
+      "runs": 9,
+      "passed": 8,
+      "toolCalls": 125,
+      "tokens": 594024,
+      "durationMs": 1579666
+    },
+    "eligible": false,
+    "at": 1791868987293,
+    "policy": "At least two tasks, three pairs each; all candidate runs pass; no aggregate token/tool regression; at least one strict improvement. Local evidence only; no claim of general benefit."
+  },
+  "reason": "Effect gate did not qualify or operator authorization absent; keep evaluated, no publication.",
+  "complete": true,
+  "trials": [
+    {
+      "taskId": "auth-refresh",
+      "repeat": 1,
+      "variant": "baseline",
+      "runId": "run-mv66n8ct-b469fe4b",
+      "passed": true,
+      "metrics": {
+        "runId": "run-mv66n8ct-b469fe4b",
+        "startedAt": 1791865821198,
+        "tasks": 1,
+        "tasksSucceeded": 1,
+        "tasksFailed": 0,
+        "replans": 1,
+        "toolCalls": 3,
+        "agents": 2,
+        "verificationRuns": 1,
+        "verificationPassed": 1,
+        "tokensIn": 12967,
+        "tokensOut": 538,
+        "endedAt": 1791865851657
+      }
+    },
+    {
+      "taskId": "auth-refresh",
+      "repeat": 1,
+      "variant": "candidate",
+      "runId": "run-mv66nwaz-0a136266",
+      "passed": true,
+      "metrics": {
+        "runId": "run-mv66nwaz-0a136266",
+        "startedAt": 1791865852235,
+        "tasks": 1,
+        "tasksSucceeded": 1,
+        "tasksFailed": 0,
+        "replans": 1,
+        "toolCalls": 13,
+        "agents": 2,
+        "verificationRuns": 1,
+        "verificationPassed": 1,
+        "tokensIn": 45553,
+        "tokensOut": 2098,
+        "endedAt": 1791866076922
+      }
+    },
+    {
+      "taskId": "auth-refresh",
+      "repeat": 2,
+      "variant": "baseline",
+      "runId": "run-mv66sqdz-ef3c4f44",
+      "passed": true,
+      "metrics": {
+        "runId": "run-mv66sqdz-ef3c4f44",
+        "startedAt": 1791866077847,
+        "tasks": 2,
+        "tasksSucceeded": 2,
+        "tasksFailed": 0,
+        "replans": 2,
+        "toolCalls": 40,
+        "agents": 5,
+        "verificationRuns": 2,
+        "verificationPassed": 1,
+        "tokensIn": 156410,
+        "tokensOut": 4459,
+        "endedAt": 1791866485973
+      }
+    },
+    {
+      "taskId": "auth-refresh",
+      "repeat": 2,
+      "variant": "candidate",
+      "runId": "run-mv671i2v-631f7b6b",
+      "passed": true,
+      "metrics": {
+        "runId": "run-mv671i2v-631f7b6b",
+        "startedAt": 1791866486983,
+        "tasks": 1,
+        "tasksSucceeded": 1,
+        "tasksFailed": 0,
+        "replans": 1,
+        "toolCalls": 7,
+        "agents": 2,
+        "verificationRuns": 1,
+        "verificationPassed": 1,
+        "tokensIn": 29001,
+        "tokensOut": 928,
+        "endedAt": 1791866527398
+      }
+    },
+    {
+      "taskId": "auth-refresh",
+      "repeat": 3,
+      "variant": "baseline",
+      "runId": "run-mv672dp1-a8918750",
+      "passed": true,
+      "metrics": {
+        "runId": "run-mv672dp1-a8918750",
+        "startedAt": 1791866527957,
+        "tasks": 1,
+        "tasksSucceeded": 1,
+        "tasksFailed": 0,
+        "replans": 1,
+        "toolCalls": 19,
+        "agents": 3,
+        "verificationRuns": 1,
+        "verificationPassed": 1,
+        "tokensIn": 81834,
+        "tokensOut": 1852,
+        "endedAt": 1791866708927
+      }
+    },
+    {
+      "taskId": "auth-refresh",
+      "repeat": 3,
+      "variant": "candidate",
+      "runId": "run-mv676a1o-acb97950",
+      "passed": true,
+      "metrics": {
+        "runId": "run-mv676a1o-acb97950",
+        "startedAt": 1791866709852,
+        "tasks": 1,
+        "tasksSucceeded": 1,
+        "tasksFailed": 0,
+        "replans": 1,
+        "toolCalls": 4,
+        "agents": 2,
+        "verificationRuns": 1,
+        "verificationPassed": 1,
+        "tokensIn": 17898,
+        "tokensOut": 703,
+        "endedAt": 1791866777643
+      }
+    },
+    {
+      "taskId": "repeated-refresh",
+      "repeat": 1,
+      "variant": "baseline",
+      "runId": "run-mv677qrh-0781ca91",
+      "passed": true,
+      "metrics": {
+        "runId": "run-mv677qrh-0781ca91",
+        "startedAt": 1791866778173,
+        "tasks": 1,
+        "tasksSucceeded": 1,
+        "tasksFailed": 0,
+        "replans": 0,
+        "toolCalls": 5,
+        "agents": 2,
+        "verificationRuns": 1,
+        "verificationPassed": 1,
+        "tokensIn": 18583,
+        "tokensOut": 671,
+        "endedAt": 1791866808123
+      }
+    },
+    {
+      "taskId": "repeated-refresh",
+      "repeat": 1,
+      "variant": "candidate",
+      "runId": "run-mv678fxq-d020ef01",
+      "passed": true,
+      "metrics": {
+        "runId": "run-mv678fxq-d020ef01",
+        "startedAt": 1791866810799,
+        "tasks": 3,
+        "tasksSucceeded": 3,
+        "tasksFailed": 0,
+        "replans": 0,
+        "toolCalls": 11,
+        "agents": 4,
+        "verificationRuns": 1,
+        "verificationPassed": 1,
+        "tokensIn": 39828,
+        "tokensOut": 1505,
+        "endedAt": 1791866956252
+      }
+    },
+    {
+      "taskId": "repeated-refresh",
+      "repeat": 2,
+      "variant": "baseline",
+      "runId": "run-mv67bli5-a46020f9",
+      "passed": true,
+      "metrics": {
+        "runId": "run-mv67bli5-a46020f9",
+        "startedAt": 1791866957982,
+        "tasks": 1,
+        "tasksSucceeded": 1,
+        "tasksFailed": 0,
+        "replans": 1,
+        "toolCalls": 31,
+        "agents": 2,
+        "verificationRuns": 1,
+        "verificationPassed": 1,
+        "tokensIn": 97021,
+        "tokensOut": 2641,
+        "endedAt": 1791867199708
+      }
+    },
+    {
+      "taskId": "repeated-refresh",
+      "repeat": 2,
+      "variant": "candidate",
+      "runId": "run-mv67gset-72ea31ef",
+      "passed": true,
+      "metrics": {
+        "runId": "run-mv67gset-72ea31ef",
+        "startedAt": 1791867200213,
+        "tasks": 3,
+        "tasksSucceeded": 3,
+        "tasksFailed": 0,
+        "replans": 0,
+        "toolCalls": 9,
+        "agents": 4,
+        "verificationRuns": 1,
+        "verificationPassed": 1,
+        "tokensIn": 37399,
+        "tokensOut": 1109,
+        "endedAt": 1791867320212
+      }
+    },
+    {
+      "taskId": "repeated-refresh",
+      "repeat": 3,
+      "variant": "baseline",
+      "runId": "run-mv67jdoo-0b2ddb78",
+      "passed": true,
+      "metrics": {
+        "runId": "run-mv67jdoo-0b2ddb78",
+        "startedAt": 1791867321096,
+        "tasks": 1,
+        "tasksSucceeded": 1,
+        "tasksFailed": 0,
+        "replans": 0,
+        "toolCalls": 23,
+        "agents": 2,
+        "verificationRuns": 1,
+        "verificationPassed": 1,
+        "tokensIn": 81783,
+        "tokensOut": 2114,
+        "endedAt": 1791867483682
+      }
+    },
+    {
+      "taskId": "repeated-refresh",
+      "repeat": 3,
+      "variant": "candidate",
+      "runId": "run-mv67mviq-3d119100",
+      "passed": true,
+      "metrics": {
+        "runId": "run-mv67mviq-3d119100",
+        "startedAt": 1791867484178,
+        "tasks": 1,
+        "tasksSucceeded": 1,
+        "tasksFailed": 0,
+        "replans": 1,
+        "toolCalls": 9,
+        "agents": 2,
+        "verificationRuns": 1,
+        "verificationPassed": 1,
+        "tokensIn": 35047,
+        "tokensOut": 956,
+        "endedAt": 1791867550953
+      }
+    },
+    {
+      "taskId": "expiry-boundary",
+      "repeat": 1,
+      "variant": "baseline",
+      "runId": "run-mv67obvp-57f9b06c",
+      "passed": true,
+      "metrics": {
+        "runId": "run-mv67obvp-57f9b06c",
+        "startedAt": 1791867552037,
+        "tasks": 1,
+        "tasksSucceeded": 1,
+        "tasksFailed": 0,
+        "replans": 0,
+        "toolCalls": 23,
+        "agents": 2,
+        "verificationRuns": 1,
+        "verificationPassed": 1,
+        "tokensIn": 76786,
+        "tokensOut": 2075,
+        "endedAt": 1791867770497
+      }
+    },
+    {
+      "taskId": "expiry-boundary",
+      "repeat": 1,
+      "variant": "candidate",
+      "runId": "run-mv67t0xg-bdbb1ea3",
+      "passed": false,
+      "metrics": {
+        "runId": "run-mv67t0xg-bdbb1ea3",
+        "startedAt": 1791867771124,
+        "tasks": 3,
+        "tasksSucceeded": 0,
+        "tasksFailed": 1,
+        "replans": 0,
+        "toolCalls": 12,
+        "agents": 3,
+        "verificationRuns": 1,
+        "verificationPassed": 0,
+        "tokensIn": 36425,
+        "tokensOut": 2259,
+        "endedAt": 1791867943477
+      }
+    },
+    {
+      "taskId": "expiry-boundary",
+      "repeat": 2,
+      "variant": "baseline",
+      "runId": "run-mv67wqpe-97b5ba9c",
+      "passed": true,
+      "metrics": {
+        "runId": "run-mv67wqpe-97b5ba9c",
+        "startedAt": 1791867944499,
+        "tasks": 1,
+        "tasksSucceeded": 1,
+        "tasksFailed": 0,
+        "replans": 0,
+        "toolCalls": 8,
+        "agents": 3,
+        "verificationRuns": 1,
+        "verificationPassed": 1,
+        "tokensIn": 30986,
+        "tokensOut": 1008,
+        "endedAt": 1791868072637
+      }
+    },
+    {
+      "taskId": "expiry-boundary",
+      "repeat": 2,
+      "variant": "candidate",
+      "runId": "run-mv67zhz1-4a307552",
+      "passed": true,
+      "metrics": {
+        "runId": "run-mv67zhz1-4a307552",
+        "startedAt": 1791868073149,
+        "tasks": 1,
+        "tasksSucceeded": 1,
+        "tasksFailed": 0,
+        "replans": 1,
+        "toolCalls": 45,
+        "agents": 3,
+        "verificationRuns": 1,
+        "verificationPassed": 1,
+        "tokensIn": 268754,
+        "tokensOut": 5340,
+        "endedAt": 1791868531545
+      }
+    },
+    {
+      "taskId": "expiry-boundary",
+      "repeat": 3,
+      "variant": "baseline",
+      "runId": "run-mv689c3m-7e9a6e80",
+      "passed": true,
+      "metrics": {
+        "runId": "run-mv689c3m-7e9a6e80",
+        "startedAt": 1791868532098,
+        "tasks": 1,
+        "tasksSucceeded": 1,
+        "tasksFailed": 0,
+        "replans": 1,
+        "toolCalls": 6,
+        "agents": 2,
+        "verificationRuns": 1,
+        "verificationPassed": 1,
+        "tokensIn": 23946,
+        "tokensOut": 1968,
+        "endedAt": 1791868701688
+      }
+    },
+    {
+      "taskId": "expiry-boundary",
+      "repeat": 3,
+      "variant": "candidate",
+      "runId": "run-mv68czyh-fba023c2",
+      "passed": true,
+      "metrics": {
+        "runId": "run-mv68czyh-fba023c2",
+        "startedAt": 1791868702985,
+        "tasks": 1,
+        "tasksSucceeded": 1,
+        "tasksFailed": 0,
+        "replans": 1,
+        "toolCalls": 15,
+        "agents": 3,
+        "verificationRuns": 1,
+        "verificationPassed": 1,
+        "tokensIn": 66137,
+        "tokensOut": 3084,
+        "endedAt": 1791868986782
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "revoke-token",
+  "repo": {
+    "bundle": "../fixtures/token-refresh.bundle",
+    "commit": "2fd0e5c9a9a2722fd4bfe8e621c65f57ee64dc97"
+  },
+  "task": {
+    "description": "修复撤销指定 token 时误保留目标 token、删除其他 token 的问题。",
+    "type": "bugfix",
+    "hintFiles": [
+      "src/auth/token-service.ts"
+    ]
+  },
+  "verification": {
+    "commands": [
+      "npm run typecheck",
+      "npm test"
+    ],
+    "readOnly": false
+  },
+  "limits": {
+    "timeoutMs": 600000
+  },
+  "baselineExpected": "fail",
+  "correctCommit": "618445df407d4405687a677a16fd34a59b69a41e"
+}

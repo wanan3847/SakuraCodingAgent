@@ -1,0 +1,15 @@
+{
+  "runId": "run-mv5z21cz-97b4b8f3",
+  "startedAt": 1791853075044,
+  "tasks": 1,
+  "tasksSucceeded": 1,
+  "tasksFailed": 0,
+  "replans": 0,
+  "toolCalls": 26,
+  "agents": 3,
+  "verificationRuns": 1,
+  "verificationPassed": 1,
+  "tokensIn": 93480,
+  "tokensOut": 2103,
+  "endedAt": 1791853289960
+}

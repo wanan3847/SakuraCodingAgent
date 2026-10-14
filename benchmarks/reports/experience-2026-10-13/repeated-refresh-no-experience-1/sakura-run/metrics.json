@@ -1,0 +1,15 @@
+{
+  "runId": "run-mv5ygfx9-5733ba19",
+  "startedAt": 1791852067485,
+  "tasks": 1,
+  "tasksSucceeded": 1,
+  "tasksFailed": 0,
+  "replans": 1,
+  "toolCalls": 16,
+  "agents": 2,
+  "verificationRuns": 1,
+  "verificationPassed": 1,
+  "tokensIn": 72165,
+  "tokensOut": 3243,
+  "endedAt": 1791852301165
+}

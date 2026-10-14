@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="Sakura Coding Agent 基于 Pi Runtime，帮助开发者理解仓库、规划编码任务、协作实现并验证交付。">
+<title>Sakura Coding Agent | 从任务到可审阅的代码</title>
+<link rel="preload" as="image" href="./assets/sakura-hero.png" fetchpriority="high">
+<link rel="stylesheet" href="./landing.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+<header class="site-header">
+  <div class="nav-shell">
+    <a class="wordmark" href="./" aria-label="Sakura 首页"><span aria-hidden="true">🌸</span><span>Sakura</span></a>
+    <nav aria-label="主导航"><a href="#workflow">工作方式</a><a href="#capabilities">能力</a><a href="./guide.html">文档</a></nav>
+    <a class="nav-action" href="#start">开始使用 <span aria-hidden="true">↗</span></a>
+  </div>
+</header>
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow">一个理解工程的编码 Agent</p>
+      <h1 id="hero-title">先理解代码。<br>再交付改动。</h1>
+      <p class="hero-description">Sakura 把仓库分析、任务规划、Agent 协作和真实验证连成一条可审阅的工作流。</p>
+      <div class="hero-actions">
+        <a class="button-primary" href="#start">开始使用 <span aria-hidden="true">↗</span></a>
+        <a class="button-text" href="./guide.html">阅读快速指南 <span aria-hidden="true">›</span></a>
+      </div>
+    </div>
+    <div class="hero-image-wrap">
+      <img class="hero-image" src="./assets/sakura-hero.png" alt="白色背景上的浅粉色樱花枝">
+    </div>
+  </section>
+
+  <section class="workflow-section" id="workflow" aria-labelledby="workflow-title">
+    <div class="section-shell workflow-layout">
+      <div class="section-intro">
+        <h2 id="workflow-title">代码任务，<br>不止是写入文件。</h2>
+        <p>从目标到变更，每一步都有来源、有状态，也有可以检查的结果。</p>
+      </div>
+      <ol class="workflow-list">
+        <li><div><h3>理解</h3><p>从仓库中找到相关文件、符号与测试。</p></div></li>
+        <li><div><h3>规划</h3><p>按依赖拆分任务，确定角色和修改范围。</p></div></li>
+        <li><div><h3>执行</h3><p>在独立工作区完成修改，保留完整变更。</p></div></li>
+        <li><div><h3>验证</h3><p>运行项目检查，汇总报告与 diff 供你审阅。</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="capabilities-section section-shell" id="capabilities" aria-labelledby="capabilities-title">
+    <div class="capabilities-heading">
+      <h2 id="capabilities-title">为真实工程任务设计。</h2>
+      <p>五个模块共用一套任务记录。你可以追踪决策、修改和验证证据。</p>
+    </div>
+    <div class="capabilities-grid">
+      <article class="capability capability-main">
+        <span class="capability-number">01</span><h3>动态任务规划</h3>
+        <p>将复杂目标拆成带依赖关系的任务。执行遇到新信息时，可以基于证据调整计划。</p>
+        <code>src/planning/</code>
+      </article>
+      <article class="capability">
+        <span class="capability-number">02</span><h3>多 Agent 协作</h3>
+        <p>按角色和写入范围调度子 Agent。依赖任务会接收前序产物，独立任务可以并行。</p>
+        <code>src/orchestrator/</code>
+      </article>
+      <article class="capability">
+        <span class="capability-number">03</span><h3>仓库理解</h3>
+        <p>解析 TypeScript 与 JavaScript 的符号、引用和测试关系，为上下文选择提供依据。</p>
+        <code>src/repo-intelligence/</code>
+      </article>
+      <article class="capability">
+        <span class="capability-number">04</span><h3>隔离工作区</h3>
+        <p>用 Git worktree 保存独立改动，检查权限与冲突，再以可重放产物交付。</p>
+        <code>src/workspace/</code>
+      </article>
+      <article class="capability">
+        <span class="capability-number">05</span><h3>经验与技能</h3>
+        <p>记录有来源的运行经验。候选技能经过真实回放和效果门槛，再进入发布流程。</p>
+        <code>src/experience/</code>
+      </article>
+    </div>
+  </section>
+
+  <section class="runtime-section" aria-labelledby="runtime-title">
+    <div class="section-shell runtime-layout">
+      <div>
+        <h2 id="runtime-title">熟悉 Pi。<br>保持自己的配置。</h2>
+        <p>Sakura 复用 Pi 的模型会话、工具、主题与扩展接口。独立启动时使用自己的设置目录，不读取个人或项目的 Pi 配置。</p>
+        <a class="button-text button-text-light" href="./guide.html#ecosystem">了解 Pi 生态兼容 <span aria-hidden="true">›</span></a>
+      </div>
+      <div class="runtime-code">
+        <p>安装后的独立命令</p>
+        <pre><code>sakura init YOUR_MODEL
+sakura</code></pre>
+        <span>配置目录：<code>~/.sakura/agent</code></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="scope-section section-shell" aria-labelledby="scope-title">
+    <div class="scope-intro">
+      <h2 id="scope-title">把能力边界说清楚。</h2>
+      <p>当前版本面向 TypeScript 与 JavaScript 工程。Sakura 已完成多轮固定任务验收，评测也保留了未通过的结果。</p>
+    </div>
+    <div class="scope-details">
+      <div><h3>目前可用</h3><p>计划、协作、隔离执行、验证、取消恢复、运行历史、diff 审阅与 Pi 资源管理。</p></div>
+      <div><h3>仍在拓展</h3><p>其他语言会退回通用文件工具；经验模式聚类尚未实现。现有固定任务评测没有证明多 Agent 普遍优于单 Agent。</p></div>
+      <a href="./guide.html#scope">查看能力边界 <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+
+  <section class="start-section" id="start" aria-labelledby="start-title">
+    <div class="section-shell start-layout">
+      <div class="start-copy">
+        <h2 id="start-title">从你的下一个任务开始。</h2>
+        <p>准备一个本地 Ollama 模型，在终端中启动 Sakura。</p>
+        <a class="button-text" href="./guide.html">查看完整安装说明 <span aria-hidden="true">›</span></a>
+      </div>
+      <div class="install-block">
+        <div class="install-heading"><span>npm 全局安装</span><button id="copy-install" type="button">复制命令</button></div>
+        <pre id="install-command"><code>git clone &lt;repo&gt; &amp;&amp; cd SakuraCodingAgent
+npm ci --ignore-scripts
+npm i -g .
+sakura init YOUR_MODEL
+sakura</code></pre>
+        <p>在仓库根目录执行（仓库根就是包根目录）。也可以 <code>npm run pack</code> 后用 <code>npm i -g ./sakura.tgz</code> 分发 tarball，或 <code>npm run app</code> 一次完成打包与安装。需要 Node.js 22.19 或更新版本；<code>YOUR_MODEL</code> 是已安装的 Ollama 模型名。</p>
+        <span class="copy-status" id="copy-status" role="status" aria-live="polite"></span>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="section-shell footer-top"><a class="wordmark" href="./"><span aria-hidden="true">🌸</span><span>Sakura</span></a><nav aria-label="页脚导航"><a href="./guide.html">文档</a><a href="./license.txt">MIT License</a><a href="/workbench">本地运行记录</a></nav></div>
+  <div class="section-shell footer-bottom"><span>基于 Pi Runtime 构建的开源编码 Agent</span><a href="#main">回到顶部 ↑</a></div>
+</footer>
+<script src="./landing.js"></script>
+</body>
+</html>

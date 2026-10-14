@@ -1,0 +1,34 @@
+{
+	"name": "my-pi-agent",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"keywords": [
+		"pi-package"
+	],
+	"pi": {
+		"extensions": [
+			"./extensions"
+		],
+		"skills": [
+			"./skills"
+		],
+		"prompts": [
+			"./prompts"
+		]
+	},
+	"devDependencies": {
+		"@earendil-works/pi-coding-agent": "0.85.1",
+		"@types/node": "^22.20.3",
+		"typebox": "1.1.38",
+		"typescript": "5.9.3"
+	},
+	"peerDependencies": {
+		"@earendil-works/pi-coding-agent": "*",
+		"typebox": "*"
+	},
+	"scripts": {
+		"typecheck": "tsc --noEmit -p tsconfig.json",
+		"check": "node ../../scripts/check-plugin.mjs ."
+	}
+}

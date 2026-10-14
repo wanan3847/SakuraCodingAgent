@@ -1,0 +1,26 @@
+{
+  "id": "cancel-recovery",
+  "repo": {
+    "bundle": "../fixtures/token-refresh.bundle",
+    "commit": "a8fbda36a536e682d56fb8573ce1869174546c25"
+  },
+  "task": {
+    "description": "修复 canLogin 在第三次失败后仍放行的问题，支持中断后恢复并保持最终检查通过。",
+    "type": "recovery",
+    "hintFiles": [
+      "src/auth/auth-service.ts"
+    ]
+  },
+  "verification": {
+    "commands": [
+      "npm run typecheck",
+      "npm test"
+    ],
+    "readOnly": false
+  },
+  "limits": {
+    "timeoutMs": 600000
+  },
+  "baselineExpected": "fail",
+  "correctCommit": "618445df407d4405687a677a16fd34a59b69a41e"
+}

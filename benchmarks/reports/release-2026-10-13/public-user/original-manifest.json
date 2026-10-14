@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "patchSha256": "14137c14c8aef578eac5f84a91f27c154b90ecd9e8ae8c51b74e65ca9bf29d86",
+  "baseCommit": "9ea71ed303eeeeb704a4d3a46dcd8bd121b38262",
+  "changedFiles": [
+    "src/users/users.ts"
+  ],
+  "changes": [
+    {
+      "status": "M",
+      "path": "src/users/users.ts"
+    }
+  ],
+  "diffFile": "result.diff",
+  "createdAt": "2026-10-12T23:51:26.034Z"
+}

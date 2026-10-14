@@ -1,0 +1,70 @@
+{
+  "taskId": "repeated-refresh",
+  "variant": "no-experience",
+  "repeat": 1,
+  "baseCommit": "a3a04a92b3702dec8af760f5fc9195f15ac01ef4",
+  "timeoutMs": 600000,
+  "status": "passed",
+  "durationMs": 244077,
+  "metricsScope": "complete",
+  "experienceSeed": "/Users/yangyazhou/SakuraCodingAgent/sakura/.sakura/benchmarks/experience-seed",
+  "experienceSeedSha256": "3c0eaa3addccfd6bc84d576d7ba93fe599332f503e7bf3cb8684cc55717cefb1",
+  "execution": "succeeded",
+  "replans": 0,
+  "retries": 0,
+  "toolCalls": 16,
+  "tokensIn": 72165,
+  "tokensOut": 3243,
+  "agentCalls": 2,
+  "filesRead": 0,
+  "contextTokens": 6331,
+  "contextTokenMeasurement": "Pi assistant usage peak(input + cacheRead)",
+  "conflicts": 0,
+  "contextPackTokens": 2626,
+  "contextPackEstimator": "utf8-bytes-upper-estimate",
+  "experienceSources": [],
+  "verification": {
+    "passed": true,
+    "status": "passed",
+    "steps": [
+      {
+        "command": "npm run typecheck",
+        "exitCode": 0,
+        "durationMs": 4494,
+        "stdoutTail": "\n> typecheck\n> tsc --noEmit\n\n",
+        "stderrTail": ""
+      },
+      {
+        "command": "npm test",
+        "exitCode": 0,
+        "durationMs": 1161,
+        "stdoutTail": "\n> test\n> node tests/check.mjs\n\nscenario checks passed: repeated-refresh\n",
+        "stderrTail": ""
+      }
+    ],
+    "reviewedDiff": false,
+    "failures": []
+  },
+  "fixedVerification": {
+    "passed": true,
+    "status": "passed",
+    "steps": [
+      {
+        "command": "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/Users/yangyazhou/SakuraCodingAgent/sakura/node_modules/typescript/bin/tsc' --noEmit -p '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-cb3uM6/tsconfig.json'",
+        "exitCode": 0,
+        "durationMs": 3441,
+        "stdoutTail": "",
+        "stderrTail": ""
+      },
+      {
+        "command": "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-cb3uM6/check.mjs'",
+        "exitCode": 0,
+        "durationMs": 410,
+        "stdoutTail": "scenario checks passed: repeated-refresh\n",
+        "stderrTail": ""
+      }
+    ],
+    "reviewedDiff": false,
+    "failures": []
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "workspace": "/Users/yangyazhou/SakuraCodingAgent/sakura/.sakura/release/candidate-replay",
+  "id": "5727fff5-f562-4f72-8cc6-6e8ca92ef602",
+  "version": 1,
+  "stage": "evaluated",
+  "bodySha256": "45b13958a69dfa4cb43835e802a04aec3750fc92330d99837209a92d4c88a5d3",
+  "replaySkill": "/Users/yangyazhou/SakuraCodingAgent/sakura/.sakura/release/candidate-replay/.sakura/skill-candidates/5727fff5-f562-4f72-8cc6-6e8ca92ef602/replay-v1/sakura-learned-refresh/SKILL.md",
+  "runDir": "/Users/yangyazhou/SakuraCodingAgent/sakura/.sakura/release/candidate-replay/.sakura/runs/run-mv5zeyce-bf59b8d2",
+  "artifactPath": "/Users/yangyazhou/SakuraCodingAgent/sakura/.sakura/release/candidate-replay/.sakura/runs/run-mv5zeyce-bf59b8d2/diffs/run-mv5zeyce-bf59b8d2.json",
+  "frozen": {
+    "passed": true,
+    "status": "passed",
+    "steps": [
+      {
+        "command": "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/Users/yangyazhou/SakuraCodingAgent/sakura/node_modules/typescript/bin/tsc' --noEmit -p '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-pC7VeZ/tsconfig.json'",
+        "exitCode": 0,
+        "durationMs": 342,
+        "stdoutTail": "",
+        "stderrTail": ""
+      },
+      {
+        "command": "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-pC7VeZ/check.mjs'",
+        "exitCode": 0,
+        "durationMs": 67,
+        "stdoutTail": "scenario checks passed: repeated-refresh\n",
+        "stderrTail": ""
+      }
+    ],
+    "reviewedDiff": false,
+    "failures": []
+  },
+  "metrics": {
+    "runId": "run-mv5zeyce-bf59b8d2",
+    "startedAt": 1791853677662,
+    "tasks": 3,
+    "tasksSucceeded": 3,
+    "tasksFailed": 0,
+    "replans": 0,
+    "toolCalls": 12,
+    "agents": 4,
+    "verificationRuns": 1,
+    "verificationPassed": 1,
+    "tokensIn": 44973,
+    "tokensOut": 1059,
+    "endedAt": 1791853726956
+  },
+  "next": "Requires explicit human review before promotion"
+}

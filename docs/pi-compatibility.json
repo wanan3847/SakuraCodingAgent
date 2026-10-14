@@ -1,0 +1,15 @@
+{
+  "package": "@earendil-works/pi-coding-agent",
+  "version": "1.1.0",
+  "source": "https://github.com/earendil-works/pi",
+  "sourceTag": "v1.1.0",
+  "sourceCommit": "abe508e1b89912adde45528136c3221eb69acdd7",
+  "previousVendoredCommit": "71dca871bc80b6bc97be37f0ca3189399d651fff",
+  "nodeRequirement": ">=22.19.0",
+  "validatedNode": "26.10.0",
+  "validatedNpm": "11.19.1",
+  "integrationVersion": "0.1.0",
+  "updatedAt": "2026-10-13",
+  "checks": ["official SDK exports and TypeScript declarations", "session creation and native model configuration", "local-only rejection and role tool allowlist", "scripted provider stream and real read/write tools", "cancel, steer and followUp", "persistent session resume and native compaction", "installed package loading including themes", "isolated candidate upgrade, compatibility and rollback", "offline unit/integration suite: 125 passing", "single local Ollama auth-refresh trial with fixed external checks"],
+  "pending": ["remote CI execution", "repeated local model quality benchmark", "fair community baseline nested usage and capability ceiling", "three-group ablation matrix"]
+}

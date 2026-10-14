@@ -1,0 +1,10 @@
+{
+  "createdAt": 1791852383167,
+  "id": "verify-fix-0a0fa25e",
+  "taskId": "verify-fix",
+  "workspacePath": "/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-benchmark-trial-hSqW5b/.sakura/worktrees/verify-fix-0a0fa25e",
+  "baseCommit": "bcc1f293270f4a19f126242d617a8e02f89eb0c5",
+  "status": "failed",
+  "artifactPath": "/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-benchmark-trial-hSqW5b/.sakura/runs/run-mv5ylojy-1bfaf7d7/task-artifacts/verify-fix-0a0fa25e.json",
+  "error": "verify-fix: 写角色没有改动任何文件（workspace: /var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-benchmark-trial-hSqW5b/.sakura/worktrees/verify-fix-0a0fa25e）"
+}

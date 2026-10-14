@@ -1,0 +1,10 @@
+{
+  "createdAt": 1791853430178,
+  "id": "implementer-31611621",
+  "taskId": "implementer",
+  "workspacePath": "/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-benchmark-trial-ON6I4A/.sakura/worktrees/implementer-31611621",
+  "baseCommit": "67956b55f0c9bd19b908486dd82cf510ddcc016f",
+  "status": "failed",
+  "artifactPath": "/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-benchmark-trial-ON6I4A/.sakura/runs/run-mv5z7eoy-d6837694/task-artifacts/implementer-31611621.json",
+  "error": "implementer: 写角色没有改动任何文件（workspace: /var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-benchmark-trial-ON6I4A/.sakura/worktrees/implementer-31611621）"
+}

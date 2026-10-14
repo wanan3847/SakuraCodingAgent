@@ -1,0 +1,1 @@
+改了 `refresh` 函数使其返回新 token；通过 `scenario.txt` 中的 `auth-refresh` 测试验证修复，回归证据为 `assert.equal(refresh(old,fresh),fresh)` 成立。

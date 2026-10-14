@@ -1,0 +1,629 @@
+{
+  "metadata": {
+    "startedAt": "2026-10-13T00:41:07.408Z",
+    "node": "v26.10.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "cpu": "Apple M5",
+    "pi": "1.1.0",
+    "model": "ollama/sakura-bench-qwen35-4b",
+    "thinking": "off",
+    "sampling": "Pi/provider default, unchanged across variants",
+    "planned": 6,
+    "metricVersion": 2,
+    "tools": [
+      "read",
+      "write",
+      "edit",
+      "grep",
+      "find",
+      "ls"
+    ],
+    "costSource": "unknown: local provider prices do not measure energy or hardware cost",
+    "matrix": [
+      {
+        "taskId": "repeated-refresh",
+        "variant": "no-experience",
+        "repeat": 1,
+        "baseCommit": "a3a04a92b3702dec8af760f5fc9195f15ac01ef4",
+        "timeoutMs": 600000
+      },
+      {
+        "taskId": "repeated-refresh",
+        "variant": "sakura",
+        "repeat": 1,
+        "baseCommit": "a3a04a92b3702dec8af760f5fc9195f15ac01ef4",
+        "timeoutMs": 600000
+      },
+      {
+        "taskId": "repeated-refresh",
+        "variant": "no-experience",
+        "repeat": 2,
+        "baseCommit": "a3a04a92b3702dec8af760f5fc9195f15ac01ef4",
+        "timeoutMs": 600000
+      },
+      {
+        "taskId": "repeated-refresh",
+        "variant": "sakura",
+        "repeat": 2,
+        "baseCommit": "a3a04a92b3702dec8af760f5fc9195f15ac01ef4",
+        "timeoutMs": 600000
+      },
+      {
+        "taskId": "repeated-refresh",
+        "variant": "no-experience",
+        "repeat": 3,
+        "baseCommit": "a3a04a92b3702dec8af760f5fc9195f15ac01ef4",
+        "timeoutMs": 600000
+      },
+      {
+        "taskId": "repeated-refresh",
+        "variant": "sakura",
+        "repeat": 3,
+        "baseCommit": "a3a04a92b3702dec8af760f5fc9195f15ac01ef4",
+        "timeoutMs": 600000
+      }
+    ],
+    "sourceSha256": "882b0d922d839443495937f078950a09672a1fd651d3d9e12881f56d02d8477a",
+    "seedSha256": "3c0eaa3addccfd6bc84d576d7ba93fe599332f503e7bf3cb8684cc55717cefb1",
+    "communityPath": "/Users/yangyazhou/SakuraCodingAgent/sakura/.sakura/benchmark-plugin/node_modules/pi-subagents",
+    "contractSha256": "bf9181f6600e665bf79bba63078eea6e66f13165dbaba399693a6274bbe97dad"
+  },
+  "trials": [
+    {
+      "taskId": "repeated-refresh",
+      "variant": "no-experience",
+      "repeat": 1,
+      "baseCommit": "a3a04a92b3702dec8af760f5fc9195f15ac01ef4",
+      "timeoutMs": 600000,
+      "status": "passed",
+      "durationMs": 244077,
+      "metricsScope": "complete",
+      "experienceSeed": "/Users/yangyazhou/SakuraCodingAgent/sakura/.sakura/benchmarks/experience-seed",
+      "experienceSeedSha256": "3c0eaa3addccfd6bc84d576d7ba93fe599332f503e7bf3cb8684cc55717cefb1",
+      "execution": "succeeded",
+      "replans": 0,
+      "retries": 0,
+      "toolCalls": 16,
+      "tokensIn": 72165,
+      "tokensOut": 3243,
+      "agentCalls": 2,
+      "filesRead": 0,
+      "contextTokens": 6331,
+      "contextTokenMeasurement": "Pi assistant usage peak(input + cacheRead)",
+      "conflicts": 0,
+      "contextPackTokens": 2626,
+      "contextPackEstimator": "utf8-bytes-upper-estimate",
+      "experienceSources": [],
+      "verification": {
+        "passed": true,
+        "status": "passed",
+        "steps": [
+          {
+            "command": "npm run typecheck",
+            "exitCode": 0,
+            "durationMs": 4494,
+            "stdoutTail": "\n> typecheck\n> tsc --noEmit\n\n",
+            "stderrTail": ""
+          },
+          {
+            "command": "npm test",
+            "exitCode": 0,
+            "durationMs": 1161,
+            "stdoutTail": "\n> test\n> node tests/check.mjs\n\nscenario checks passed: repeated-refresh\n",
+            "stderrTail": ""
+          }
+        ],
+        "reviewedDiff": false,
+        "failures": []
+      },
+      "fixedVerification": {
+        "passed": true,
+        "status": "passed",
+        "steps": [
+          {
+            "command": "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/Users/yangyazhou/SakuraCodingAgent/sakura/node_modules/typescript/bin/tsc' --noEmit -p '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-cb3uM6/tsconfig.json'",
+            "exitCode": 0,
+            "durationMs": 3441,
+            "stdoutTail": "",
+            "stderrTail": ""
+          },
+          {
+            "command": "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-cb3uM6/check.mjs'",
+            "exitCode": 0,
+            "durationMs": 410,
+            "stdoutTail": "scenario checks passed: repeated-refresh\n",
+            "stderrTail": ""
+          }
+        ],
+        "reviewedDiff": false,
+        "failures": []
+      }
+    },
+    {
+      "taskId": "repeated-refresh",
+      "variant": "sakura",
+      "repeat": 1,
+      "baseCommit": "a3a04a92b3702dec8af760f5fc9195f15ac01ef4",
+      "timeoutMs": 600000,
+      "status": "passed",
+      "durationMs": 161161,
+      "metricsScope": "complete",
+      "experienceSeed": "/Users/yangyazhou/SakuraCodingAgent/sakura/.sakura/benchmarks/experience-seed",
+      "experienceSeedSha256": "3c0eaa3addccfd6bc84d576d7ba93fe599332f503e7bf3cb8684cc55717cefb1",
+      "execution": "succeeded",
+      "replans": 1,
+      "retries": 0,
+      "toolCalls": 10,
+      "tokensIn": 48961,
+      "tokensOut": 1635,
+      "agentCalls": 6,
+      "filesRead": 3,
+      "contextTokens": 3577,
+      "contextTokenMeasurement": "Pi assistant usage peak(input + cacheRead)",
+      "conflicts": 0,
+      "contextPackTokens": 3015,
+      "contextPackEstimator": "utf8-bytes-upper-estimate",
+      "experienceSources": [
+        {
+          "source": "experience-1",
+          "text": "修复刷新 token 后仍返回旧 token 的问题，补充回归证据。 | source: run-mv5w1y9y-dc91d70c (.sakura/benchmarks/local-release-smoke-r5/auth-refresh-sakura-1/sakura-run) | worked: 改了 `refresh` 函数使其返回新 token；通过 `scenario.txt` 中的 `auth-refresh` 测试验证修复，回归证据为 `assert.equal(refresh(old,fresh),fresh)` 成立。",
+          "weight": 105,
+          "estimatedTokens": 389
+        }
+      ],
+      "verification": {
+        "passed": true,
+        "status": "passed",
+        "steps": [
+          {
+            "command": "npm run typecheck",
+            "exitCode": 0,
+            "durationMs": 395,
+            "stdoutTail": "\n> typecheck\n> tsc --noEmit\n\n",
+            "stderrTail": ""
+          },
+          {
+            "command": "npm test",
+            "exitCode": 0,
+            "durationMs": 144,
+            "stdoutTail": "\n> test\n> node tests/check.mjs\n\nscenario checks passed: repeated-refresh\n",
+            "stderrTail": ""
+          }
+        ],
+        "reviewedDiff": false,
+        "failures": []
+      },
+      "fixedVerification": {
+        "passed": true,
+        "status": "passed",
+        "steps": [
+          {
+            "command": "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/Users/yangyazhou/SakuraCodingAgent/sakura/node_modules/typescript/bin/tsc' --noEmit -p '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-bzL3yD/tsconfig.json'",
+            "exitCode": 0,
+            "durationMs": 302,
+            "stdoutTail": "",
+            "stderrTail": ""
+          },
+          {
+            "command": "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-bzL3yD/check.mjs'",
+            "exitCode": 0,
+            "durationMs": 63,
+            "stdoutTail": "scenario checks passed: repeated-refresh\n",
+            "stderrTail": ""
+          }
+        ],
+        "reviewedDiff": false,
+        "failures": []
+      }
+    },
+    {
+      "taskId": "repeated-refresh",
+      "variant": "no-experience",
+      "repeat": 2,
+      "baseCommit": "a3a04a92b3702dec8af760f5fc9195f15ac01ef4",
+      "timeoutMs": 600000,
+      "status": "cancelled",
+      "durationMs": 601915,
+      "metricsScope": "complete",
+      "experienceSeed": "/Users/yangyazhou/SakuraCodingAgent/sakura/.sakura/benchmarks/experience-seed",
+      "experienceSeedSha256": "3c0eaa3addccfd6bc84d576d7ba93fe599332f503e7bf3cb8684cc55717cefb1",
+      "execution": "cancelled",
+      "replans": 2,
+      "retries": 0,
+      "toolCalls": 53,
+      "tokensIn": 232448,
+      "tokensOut": 6913,
+      "agentCalls": 8,
+      "filesRead": 3,
+      "contextTokens": 6408,
+      "contextTokenMeasurement": "Pi assistant usage peak(input + cacheRead)",
+      "conflicts": 0,
+      "contextPackTokens": 2626,
+      "contextPackEstimator": "utf8-bytes-upper-estimate",
+      "experienceSources": [],
+      "error": "Error: Sakura task execution failed; see retained run evidence",
+      "workspaceRetained": "/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-benchmark-trial-Jc1aZc"
+    },
+    {
+      "taskId": "repeated-refresh",
+      "variant": "sakura",
+      "repeat": 2,
+      "baseCommit": "a3a04a92b3702dec8af760f5fc9195f15ac01ef4",
+      "timeoutMs": 600000,
+      "status": "passed",
+      "durationMs": 216326,
+      "metricsScope": "complete",
+      "experienceSeed": "/Users/yangyazhou/SakuraCodingAgent/sakura/.sakura/benchmarks/experience-seed",
+      "experienceSeedSha256": "3c0eaa3addccfd6bc84d576d7ba93fe599332f503e7bf3cb8684cc55717cefb1",
+      "execution": "succeeded",
+      "replans": 0,
+      "retries": 1,
+      "toolCalls": 26,
+      "tokensIn": 93480,
+      "tokensOut": 2103,
+      "agentCalls": 3,
+      "filesRead": 1,
+      "contextTokens": 4486,
+      "contextTokenMeasurement": "Pi assistant usage peak(input + cacheRead)",
+      "conflicts": 0,
+      "contextPackTokens": 3015,
+      "contextPackEstimator": "utf8-bytes-upper-estimate",
+      "experienceSources": [
+        {
+          "source": "experience-1",
+          "text": "修复刷新 token 后仍返回旧 token 的问题，补充回归证据。 | source: run-mv5w1y9y-dc91d70c (.sakura/benchmarks/local-release-smoke-r5/auth-refresh-sakura-1/sakura-run) | worked: 改了 `refresh` 函数使其返回新 token；通过 `scenario.txt` 中的 `auth-refresh` 测试验证修复，回归证据为 `assert.equal(refresh(old,fresh),fresh)` 成立。",
+          "weight": 105,
+          "estimatedTokens": 389
+        }
+      ],
+      "verification": {
+        "passed": true,
+        "status": "passed",
+        "steps": [
+          {
+            "command": "npm run typecheck",
+            "exitCode": 0,
+            "durationMs": 414,
+            "stdoutTail": "\n> typecheck\n> tsc --noEmit\n\n",
+            "stderrTail": ""
+          },
+          {
+            "command": "npm test",
+            "exitCode": 0,
+            "durationMs": 145,
+            "stdoutTail": "\n> test\n> node tests/check.mjs\n\nscenario checks passed: repeated-refresh\n",
+            "stderrTail": ""
+          }
+        ],
+        "reviewedDiff": false,
+        "failures": []
+      },
+      "fixedVerification": {
+        "passed": true,
+        "status": "passed",
+        "steps": [
+          {
+            "command": "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/Users/yangyazhou/SakuraCodingAgent/sakura/node_modules/typescript/bin/tsc' --noEmit -p '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-gBpTxs/tsconfig.json'",
+            "exitCode": 0,
+            "durationMs": 311,
+            "stdoutTail": "",
+            "stderrTail": ""
+          },
+          {
+            "command": "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-gBpTxs/check.mjs'",
+            "exitCode": 0,
+            "durationMs": 66,
+            "stdoutTail": "scenario checks passed: repeated-refresh\n",
+            "stderrTail": ""
+          }
+        ],
+        "reviewedDiff": false,
+        "failures": []
+      }
+    },
+    {
+      "taskId": "repeated-refresh",
+      "variant": "no-experience",
+      "repeat": 3,
+      "baseCommit": "a3a04a92b3702dec8af760f5fc9195f15ac01ef4",
+      "timeoutMs": 600000,
+      "status": "passed",
+      "durationMs": 34468,
+      "metricsScope": "complete",
+      "experienceSeed": "/Users/yangyazhou/SakuraCodingAgent/sakura/.sakura/benchmarks/experience-seed",
+      "experienceSeedSha256": "3c0eaa3addccfd6bc84d576d7ba93fe599332f503e7bf3cb8684cc55717cefb1",
+      "execution": "succeeded",
+      "replans": 0,
+      "retries": 0,
+      "toolCalls": 5,
+      "tokensIn": 21220,
+      "tokensOut": 538,
+      "agentCalls": 2,
+      "filesRead": 1,
+      "contextTokens": 4509,
+      "contextTokenMeasurement": "Pi assistant usage peak(input + cacheRead)",
+      "conflicts": 0,
+      "contextPackTokens": 2626,
+      "contextPackEstimator": "utf8-bytes-upper-estimate",
+      "experienceSources": [],
+      "verification": {
+        "passed": true,
+        "status": "passed",
+        "steps": [
+          {
+            "command": "npm run typecheck",
+            "exitCode": 0,
+            "durationMs": 862,
+            "stdoutTail": "\n> typecheck\n> tsc --noEmit\n\n",
+            "stderrTail": ""
+          },
+          {
+            "command": "npm test",
+            "exitCode": 0,
+            "durationMs": 316,
+            "stdoutTail": "\n> test\n> node tests/check.mjs\n\nscenario checks passed: repeated-refresh\n",
+            "stderrTail": ""
+          }
+        ],
+        "reviewedDiff": false,
+        "failures": []
+      },
+      "fixedVerification": {
+        "passed": true,
+        "status": "passed",
+        "steps": [
+          {
+            "command": "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/Users/yangyazhou/SakuraCodingAgent/sakura/node_modules/typescript/bin/tsc' --noEmit -p '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-9QdCnO/tsconfig.json'",
+            "exitCode": 0,
+            "durationMs": 662,
+            "stdoutTail": "",
+            "stderrTail": ""
+          },
+          {
+            "command": "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-9QdCnO/check.mjs'",
+            "exitCode": 0,
+            "durationMs": 146,
+            "stdoutTail": "scenario checks passed: repeated-refresh\n",
+            "stderrTail": ""
+          }
+        ],
+        "reviewedDiff": false,
+        "failures": []
+      }
+    },
+    {
+      "taskId": "repeated-refresh",
+      "variant": "sakura",
+      "repeat": 3,
+      "baseCommit": "a3a04a92b3702dec8af760f5fc9195f15ac01ef4",
+      "timeoutMs": 600000,
+      "status": "passed",
+      "durationMs": 125372,
+      "metricsScope": "complete",
+      "experienceSeed": "/Users/yangyazhou/SakuraCodingAgent/sakura/.sakura/benchmarks/experience-seed",
+      "experienceSeedSha256": "3c0eaa3addccfd6bc84d576d7ba93fe599332f503e7bf3cb8684cc55717cefb1",
+      "execution": "succeeded",
+      "replans": 0,
+      "retries": 2,
+      "toolCalls": 9,
+      "tokensIn": 38445,
+      "tokensOut": 1150,
+      "agentCalls": 4,
+      "filesRead": 1,
+      "contextTokens": 3318,
+      "contextTokenMeasurement": "Pi assistant usage peak(input + cacheRead)",
+      "conflicts": 0,
+      "contextPackTokens": 3015,
+      "contextPackEstimator": "utf8-bytes-upper-estimate",
+      "experienceSources": [
+        {
+          "source": "experience-1",
+          "text": "修复刷新 token 后仍返回旧 token 的问题，补充回归证据。 | source: run-mv5w1y9y-dc91d70c (.sakura/benchmarks/local-release-smoke-r5/auth-refresh-sakura-1/sakura-run) | worked: 改了 `refresh` 函数使其返回新 token；通过 `scenario.txt` 中的 `auth-refresh` 测试验证修复，回归证据为 `assert.equal(refresh(old,fresh),fresh)` 成立。",
+          "weight": 105,
+          "estimatedTokens": 389
+        }
+      ],
+      "verification": {
+        "passed": true,
+        "status": "passed",
+        "steps": [
+          {
+            "command": "npm run typecheck",
+            "exitCode": 0,
+            "durationMs": 462,
+            "stdoutTail": "\n> typecheck\n> tsc --noEmit\n\n",
+            "stderrTail": ""
+          },
+          {
+            "command": "npm test",
+            "exitCode": 0,
+            "durationMs": 161,
+            "stdoutTail": "\n> test\n> node tests/check.mjs\n\nscenario checks passed: repeated-refresh\n",
+            "stderrTail": ""
+          }
+        ],
+        "reviewedDiff": false,
+        "failures": []
+      },
+      "fixedVerification": {
+        "passed": true,
+        "status": "passed",
+        "steps": [
+          {
+            "command": "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/Users/yangyazhou/SakuraCodingAgent/sakura/node_modules/typescript/bin/tsc' --noEmit -p '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-u5jZy5/tsconfig.json'",
+            "exitCode": 0,
+            "durationMs": 336,
+            "stdoutTail": "",
+            "stderrTail": ""
+          },
+          {
+            "command": "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-u5jZy5/check.mjs'",
+            "exitCode": 0,
+            "durationMs": 65,
+            "stdoutTail": "scenario checks passed: repeated-refresh\n",
+            "stderrTail": ""
+          }
+        ],
+        "reviewedDiff": false,
+        "failures": []
+      }
+    }
+  ],
+  "summary": [
+    {
+      "variant": "no-experience",
+      "trials": 3,
+      "passed": 2,
+      "failed": 1,
+      "successRate": 0.6666666666666666,
+      "metrics": {
+        "durationMs": {
+          "mean": 293486.6666666667,
+          "stddev": 234279.05130752848,
+          "measured": 3,
+          "total": 3
+        },
+        "tokensIn": {
+          "mean": 108611,
+          "stddev": 90002.0376917471,
+          "measured": 3,
+          "total": 3
+        },
+        "tokensOut": {
+          "mean": 3564.6666666666665,
+          "stddev": 2612.503056882847,
+          "measured": 3,
+          "total": 3
+        },
+        "toolCalls": {
+          "mean": 24.666666666666668,
+          "stddev": 20.531818125912658,
+          "measured": 3,
+          "total": 3
+        },
+        "agentCalls": {
+          "mean": 4,
+          "stddev": 2.8284271247461903,
+          "measured": 3,
+          "total": 3
+        },
+        "filesRead": {
+          "mean": 1.3333333333333333,
+          "stddev": 1.247219128924647,
+          "measured": 3,
+          "total": 3
+        },
+        "contextTokens": {
+          "mean": 5749.333333333333,
+          "stddev": 877.6112781610977,
+          "measured": 3,
+          "total": 3
+        },
+        "replans": {
+          "mean": 0.6666666666666666,
+          "stddev": 0.9428090415820634,
+          "measured": 3,
+          "total": 3
+        },
+        "retries": {
+          "mean": 0,
+          "stddev": 0,
+          "measured": 3,
+          "total": 3
+        },
+        "conflicts": {
+          "mean": 0,
+          "stddev": 0,
+          "measured": 3,
+          "total": 3
+        },
+        "cost": {
+          "mean": null,
+          "stddev": null,
+          "measured": 0,
+          "total": 3
+        }
+      },
+      "comparable": true
+    },
+    {
+      "variant": "sakura",
+      "trials": 3,
+      "passed": 3,
+      "failed": 0,
+      "successRate": 1,
+      "metrics": {
+        "durationMs": {
+          "mean": 167619.66666666666,
+          "stddev": 37411.61415330212,
+          "measured": 3,
+          "total": 3
+        },
+        "tokensIn": {
+          "mean": 60295.333333333336,
+          "stddev": 23854.60319425908,
+          "measured": 3,
+          "total": 3
+        },
+        "tokensOut": {
+          "mean": 1629.3333333333333,
+          "stddev": 389.0812540102931,
+          "measured": 3,
+          "total": 3
+        },
+        "toolCalls": {
+          "mean": 15,
+          "stddev": 7.788880963698615,
+          "measured": 3,
+          "total": 3
+        },
+        "agentCalls": {
+          "mean": 4.333333333333333,
+          "stddev": 1.247219128924647,
+          "measured": 3,
+          "total": 3
+        },
+        "filesRead": {
+          "mean": 1.6666666666666667,
+          "stddev": 0.9428090415820634,
+          "measured": 3,
+          "total": 3
+        },
+        "contextTokens": {
+          "mean": 3793.6666666666665,
+          "stddev": 500.84217962237256,
+          "measured": 3,
+          "total": 3
+        },
+        "replans": {
+          "mean": 0.3333333333333333,
+          "stddev": 0.4714045207910317,
+          "measured": 3,
+          "total": 3
+        },
+        "retries": {
+          "mean": 1,
+          "stddev": 0.816496580927726,
+          "measured": 3,
+          "total": 3
+        },
+        "conflicts": {
+          "mean": 0,
+          "stddev": 0,
+          "measured": 3,
+          "total": 3
+        },
+        "cost": {
+          "mean": null,
+          "stddev": null,
+          "measured": 0,
+          "total": 3
+        }
+      },
+      "comparable": true
+    }
+  ],
+  "complete": true,
+  "interrupted": false
+}

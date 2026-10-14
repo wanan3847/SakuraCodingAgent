@@ -1,0 +1,26 @@
+[
+  {
+    "id": "plan-run-mv5w1y9y-dc91d70c-v1",
+    "problemPattern": "修复刷新 token 后仍返回旧 token 的问题，补充回归证据。",
+    "runId": "run-mv5w1y9y-dc91d70c",
+    "traceDir": ".sakura/benchmarks/local-release-smoke-r5/auth-refresh-sakura-1/sakura-run",
+    "symptoms": [],
+    "failedAttempts": [],
+    "successfulActions": [
+      "改了 `refresh` 函数使其返回新 token；通过 `scenario.txt` 中的 `auth-refresh` 测试验证修复，回归证据为 `assert.equal(refresh(old,fresh),fresh)` 成立。"
+    ],
+    "usefulTools": [],
+    "relevantFiles": [
+      "src/auth/auth-service.ts"
+    ],
+    "verificationEvidence": [
+      "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/Users/yangyazhou/SakuraCodingAgent/sakura/node_modules/typescript/bin/tsc' --noEmit -p '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-MYB9ie/tsconfig.json' → exit 0 394ms",
+      "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-MYB9ie/check.mjs' → exit 0 71ms"
+    ],
+    "tags": [
+      "nodes:1",
+      "verified"
+    ],
+    "createdAt": 1791851022968
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-10-13T02:45:25.673Z",
+  "command": "npm run check",
+  "platform": "darwin",
+  "node": "v26.10.0",
+  "tests": 144,
+  "passed": 144,
+  "failed": 0,
+  "skipped": 0,
+  "sourceSha256": "8148368f0d49e61622dc24a1834decb03082cd1620734131ab7781beb506622e",
+  "files": {
+    "src/experience/skill-candidates.ts": "8ce4d44e36b435d3d46742bfffa6e4aaa6a1f9ca634c0dbacd90522607084a6a",
+    "src/experience/control-store.ts": "f5fc6c65196e232e38585508edd0b1b8435da0b2e6403253fb3c10426fca3b6f",
+    "src/storage/lock.ts": "9396fb596b8de6ba2dceab30c4de3c01954b8016dba687772a75fd1353beb9a0",
+    "src/run.ts": "c3e80339f5d954d2426b17ff30d9ab4d5b66284765cf48fca08c1521772fb741",
+    "src/skills/loader.ts": "bcc3d9777b2f8c7dd9b8e60189008ddfe299fd53c45433b44817eb39d8b5dc95",
+    "src/workspace/guard.ts": "2b044bf29f4b8c0a437f9998dec4301927598806b5197d3615804085c648dbdc",
+    "src/verification/test-runner.ts": "b35d008f65fa36f37a68c186d976c4add99d6ce35c652c54cced67c2a77718a9",
+    "tests/integration/skill-candidate-security.test.ts": "52a9f5de3e34d2c45398fa5a0e41cfeccd8c1832910d45732163c899288fe34b",
+    "tests/integration/skill-candidates.test.ts": "0f78295fa1e75c181da97894895c3e9ad835fdbc7d98fd18b735ee7f79188492",
+    "scripts/evaluate-candidate-pairs.ts": "29a6af366b86adb55289d7884778dc6415bf3e9a83b4e36eff083578d0979ad2",
+    "src/cli/dev.ts": "89ae4398cf11a0a8c7b951d06ea5da22266c4d89aaa2bb6d38775f1443b9e0e4"
+  },
+  "checkLogSha256": "ef0c46052a2b86269dc56bdf2e9dfa91021194c5e96df8e929366629c9619c9d",
+  "realModelEffectComplete": false,
+  "automaticApprovalAuthorized": true,
+  "pluginLogSha256": "bf1fcd33a22c209fe04f3f097f57b34f7b117bcb78980e2b2e01360dcd3f8d96",
+  "pluginPassed": true
+}

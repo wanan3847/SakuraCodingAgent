@@ -1,0 +1,11 @@
+
+> sakura-coding-agent@0.1.0 check:plugin
+> node scripts/check-plugin.mjs
+
+插件包体检：/Users/yangyazhou/SakuraCodingAgent/sakura
+  extensions: 6 个
+  tools:      6 个（跨 6 个插件文件检查了重名）
+  skills:     5 个
+  prompts:    2 个
+
+通过：没有会让插件静默失效或起不来的问题。

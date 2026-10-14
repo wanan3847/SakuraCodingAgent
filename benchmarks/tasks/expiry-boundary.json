@@ -1,0 +1,26 @@
+{
+  "id": "expiry-boundary",
+  "repo": {
+    "bundle": "../fixtures/token-refresh.bundle",
+    "commit": "98af8b32b832daaf7bf871be57486a16d989443b"
+  },
+  "task": {
+    "description": "修复 token 恰好过期时仍被判有效的边界问题。",
+    "type": "bugfix",
+    "hintFiles": [
+      "src/auth/token-service.ts"
+    ]
+  },
+  "verification": {
+    "commands": [
+      "npm run typecheck",
+      "npm test"
+    ],
+    "readOnly": false
+  },
+  "limits": {
+    "timeoutMs": 600000
+  },
+  "baselineExpected": "fail",
+  "correctCommit": "618445df407d4405687a677a16fd34a59b69a41e"
+}

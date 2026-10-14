@@ -1,0 +1,65 @@
+{
+  "taskId": "dependency-module",
+  "variant": "sakura",
+  "repeat": 1,
+  "baseCommit": "cf3be6f799027a1f735a72329241cf134693acd2",
+  "timeoutMs": 600000,
+  "status": "passed",
+  "durationMs": 314509,
+  "metricsScope": "complete",
+  "experienceSeed": null,
+  "execution": "succeeded",
+  "replans": 0,
+  "retries": 1,
+  "toolCalls": 31,
+  "tokensIn": 122684,
+  "tokensOut": 4090,
+  "agentCalls": 4,
+  "filesRead": 3,
+  "contextTokens": 2623,
+  "contextTokenMeasurement": "utf8-bytes-upper-estimate",
+  "verification": {
+    "passed": true,
+    "status": "passed",
+    "steps": [
+      {
+        "command": "npm run typecheck",
+        "exitCode": 0,
+        "durationMs": 1146,
+        "stdoutTail": "\n> typecheck\n> tsc --noEmit\n\n",
+        "stderrTail": ""
+      },
+      {
+        "command": "npm test",
+        "exitCode": 0,
+        "durationMs": 470,
+        "stdoutTail": "\n> test\n> node tests/check.mjs\n\nscenario checks passed: dependency-module\n",
+        "stderrTail": ""
+      }
+    ],
+    "reviewedDiff": false,
+    "failures": []
+  },
+  "fixedVerification": {
+    "passed": true,
+    "status": "passed",
+    "steps": [
+      {
+        "command": "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/Users/yangyazhou/SakuraCodingAgent/sakura/node_modules/typescript/bin/tsc' --noEmit -p '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-U2DbWc/tsconfig.json'",
+        "exitCode": 0,
+        "durationMs": 978,
+        "stdoutTail": "",
+        "stderrTail": ""
+      },
+      {
+        "command": "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-U2DbWc/check.mjs'",
+        "exitCode": 0,
+        "durationMs": 214,
+        "stdoutTail": "scenario checks passed: dependency-module\n",
+        "stderrTail": ""
+      }
+    ],
+    "reviewedDiff": false,
+    "failures": []
+  }
+}

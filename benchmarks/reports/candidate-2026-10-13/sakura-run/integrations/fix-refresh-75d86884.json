@@ -1,0 +1,9 @@
+{
+  "createdAt": 1791853700870,
+  "id": "fix-refresh-75d86884",
+  "taskId": "fix-refresh",
+  "workspacePath": "/Users/yangyazhou/SakuraCodingAgent/sakura/.sakura/release/candidate-replay/.sakura/worktrees/fix-refresh-75d86884",
+  "baseCommit": "5467c3338aa50821282dd99306db6d0d4c187b3a",
+  "status": "integrated",
+  "artifactPath": "/Users/yangyazhou/SakuraCodingAgent/sakura/.sakura/release/candidate-replay/.sakura/runs/run-mv5zeyce-bf59b8d2/task-artifacts/fix-refresh-75d86884.json"
+}

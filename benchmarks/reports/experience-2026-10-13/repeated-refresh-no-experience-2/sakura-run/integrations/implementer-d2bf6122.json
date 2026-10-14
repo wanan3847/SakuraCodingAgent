@@ -1,0 +1,10 @@
+{
+  "createdAt": 1791852544515,
+  "id": "implementer-d2bf6122",
+  "taskId": "implementer",
+  "workspacePath": "/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-benchmark-trial-Jc1aZc/.sakura/worktrees/implementer-d2bf6122",
+  "baseCommit": "998a2455edf7ea743ba1f8d1006397faa9c95515",
+  "status": "failed",
+  "artifactPath": "/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-benchmark-trial-Jc1aZc/.sakura/runs/run-mv5yp4np-6edafe69/task-artifacts/implementer-d2bf6122.json",
+  "error": "Policy denied execution: write: write outside task scope; edit: write outside task scope; edit: write outside task scope"
+}

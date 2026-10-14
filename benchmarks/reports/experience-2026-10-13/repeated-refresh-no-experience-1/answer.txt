@@ -1,0 +1,1 @@
+模型自述（执行事实以工具轨迹和外层检查为准）：一句话总结：修复了 refresh 函数返回旧 token 的 bug，并修正了 canLogin 边界条件从 `<3` 改为 `<=3`；验证场景（auth-refresh、all、revoke-token、public-user、name-refactor、dependency-module、cancel-recovery）均通过。

@@ -1,0 +1,62 @@
+{
+  "pack": {
+    "text": "# experience-1\n修复刷新 token 后仍返回旧 token 的问题，补充回归证据。 | source: run-mv5w1y9y-dc91d70c (.sakura/benchmarks/local-release-smoke-r5/auth-refresh-sakura-1/sakura-run) | worked: 改了 `refresh` 函数使其返回新 token；通过 `scenario.txt` 中的 `auth-refresh` 测试验证修复，回归证据为 `assert.equal(refresh(old,fresh),fresh)` 成立。\n\n# repository src/auth/auth-service.ts:1-3\nimport type {Token} from './token-service.ts';\nexport function refresh(current:Token,next:Token){return current;}\nexport function canLogin(attempts:number){return attempts<3;}\n\n\n# repository src/auth/token-service.ts:1-3\nexport interface Token {value:string;expires:number}\nexport function expired(token:Token,now:number){return token.expires<=now;}\nexport function revoke(tokens:Token[],value:string){return tokens.filter(token=>token.value!==value);}\n\n\n# repository src/users/users.ts:1-3\nexport interface User {name:string;password:string}\nexport function publicUser(user:User){return {name:user.name};}\nexport function displayName(first:string,last:string){return [first.trim(),last.trim()].filter(Boolean).join(' ');}\n\n\n# repository tests/check.mjs:1-17\nimport assert from 'node:assert/strict';\nimport {readFile} from 'node:fs/promises';\nimport {refresh,canLogin} from '../src/auth/auth-service.ts';\nimport {expired,revoke} from '../src/auth/token-service.ts';\nimport {publicUser,displayName} from '../src/users/users.ts';\nconst scenario=(await readFile('scenario.txt','utf8')).trim();\nconst fresh={value:'new',expires:20},old={value:'old',expires:10};\nif(['auth-refresh','repeated-refresh','all'].includes(scenario)) assert.equal(refresh(old,fresh),fresh);\nif(['expiry-boundary','all'].includes(scenario)) {assert.equal(expired(old,10),true);assert.equal(expired(fresh,10),false);}\nif(['revoke-token','all'].includes(scenario)) assert.deepEqual(revoke([old,fresh],'old'),[fresh]);\nif(['public-user','all'].includes(scenario)) assert.deepEqual(publicUser({name:'A',password:'secret'}),{name:'A'});\nif(['name-refactor','all'].includes(scenario)) {assert.equal(displayName(' A ',' B '),'A B');assert.equal(displayName('','B'),'B');}\nif(scenario==='new-cache') {const {TokenCache}=await import('../src/auth/cache.ts');const cache=new TokenCache();cache.set('user',fresh);assert.equal(cache.get('user',19).value,'new');assert.equal(cache.get('user',20),undefined);}\nif(scenario==='dependency-module') {const {loginLimit}=await import('../src/auth/login-policy.ts');assert.equal(loginLimit,3);assert.match(await readFile('src/auth/auth-service.ts','utf8'),/import[^\\n]+login-policy/);assert.equal(canLogin(2),true);assert.equal(canLogin(3),false);}\nif(['cancel-recovery','all'].includes(scenario)) {assert.equal(canLogin(2),true);assert.equal(canLogin(3),false);}\nif(scenario==='read-only-review') {assert.equal(refresh(old,fresh),old);console.log('Read-only fixture: static stale-token finding required; no code edits expected.');}\nconsole.log('scenario checks passed:',scenario);\n\n\n",
+    "estimatedTokens": 3015,
+    "budget": 8192,
+    "estimator": "utf8-bytes-upper-estimate",
+    "selected": [
+      {
+        "source": "experience-1",
+        "text": "修复刷新 token 后仍返回旧 token 的问题，补充回归证据。 | source: run-mv5w1y9y-dc91d70c (.sakura/benchmarks/local-release-smoke-r5/auth-refresh-sakura-1/sakura-run) | worked: 改了 `refresh` 函数使其返回新 token；通过 `scenario.txt` 中的 `auth-refresh` 测试验证修复，回归证据为 `assert.equal(refresh(old,fresh),fresh)` 成立。",
+        "weight": 105,
+        "estimatedTokens": 389
+      },
+      {
+        "source": "repository",
+        "path": "src/auth/auth-service.ts",
+        "startLine": 1,
+        "endLine": 3,
+        "text": "import type {Token} from './token-service.ts';\nexport function refresh(current:Token,next:Token){return current;}\nexport function canLogin(attempts:number){return attempts<3;}\n",
+        "weight": 100,
+        "estimatedTokens": 220
+      },
+      {
+        "source": "repository",
+        "path": "src/auth/token-service.ts",
+        "startLine": 1,
+        "endLine": 3,
+        "text": "export interface Token {value:string;expires:number}\nexport function expired(token:Token,now:number){return token.expires<=now;}\nexport function revoke(tokens:Token[],value:string){return tokens.filter(token=>token.value!==value);}\n",
+        "weight": 99,
+        "estimatedTokens": 277
+      },
+      {
+        "source": "repository",
+        "path": "src/users/users.ts",
+        "startLine": 1,
+        "endLine": 3,
+        "text": "export interface User {name:string;password:string}\nexport function publicUser(user:User){return {name:user.name};}\nexport function displayName(first:string,last:string){return [first.trim(),last.trim()].filter(Boolean).join(' ');}\n",
+        "weight": 98,
+        "estimatedTokens": 270
+      },
+      {
+        "source": "repository",
+        "path": "tests/check.mjs",
+        "startLine": 1,
+        "endLine": 17,
+        "text": "import assert from 'node:assert/strict';\nimport {readFile} from 'node:fs/promises';\nimport {refresh,canLogin} from '../src/auth/auth-service.ts';\nimport {expired,revoke} from '../src/auth/token-service.ts';\nimport {publicUser,displayName} from '../src/users/users.ts';\nconst scenario=(await readFile('scenario.txt','utf8')).trim();\nconst fresh={value:'new',expires:20},old={value:'old',expires:10};\nif(['auth-refresh','repeated-refresh','all'].includes(scenario)) assert.equal(refresh(old,fresh),fresh);\nif(['expiry-boundary','all'].includes(scenario)) {assert.equal(expired(old,10),true);assert.equal(expired(fresh,10),false);}\nif(['revoke-token','all'].includes(scenario)) assert.deepEqual(revoke([old,fresh],'old'),[fresh]);\nif(['public-user','all'].includes(scenario)) assert.deepEqual(publicUser({name:'A',password:'secret'}),{name:'A'});\nif(['name-refactor','all'].includes(scenario)) {assert.equal(displayName(' A ',' B '),'A B');assert.equal(displayName('','B'),'B');}\nif(scenario==='new-cache') {const {TokenCache}=await import('../src/auth/cache.ts');const cache=new TokenCache();cache.set('user',fresh);assert.equal(cache.get('user',19).value,'new');assert.equal(cache.get('user',20),undefined);}\nif(scenario==='dependency-module') {const {loginLimit}=await import('../src/auth/login-policy.ts');assert.equal(loginLimit,3);assert.match(await readFile('src/auth/auth-service.ts','utf8'),/import[^\\n]+login-policy/);assert.equal(canLogin(2),true);assert.equal(canLogin(3),false);}\nif(['cancel-recovery','all'].includes(scenario)) {assert.equal(canLogin(2),true);assert.equal(canLogin(3),false);}\nif(scenario==='read-only-review') {assert.equal(refresh(old,fresh),old);console.log('Read-only fixture: static stale-token finding required; no code edits expected.');}\nconsole.log('scenario checks passed:',scenario);\n",
+        "weight": 97,
+        "estimatedTokens": 1859
+      }
+    ],
+    "truncated": [],
+    "coverage": "Compiler-resolved indexed TS/JS symbols; external packages, dynamic dispatch and unresolved aliases require read/grep fallback."
+  },
+  "index": {
+    "indexedFiles": 4,
+    "parsedFiles": 4,
+    "reusedFiles": 0,
+    "unresolvedCalls": 38,
+    "skipped": []
+  },
+  "unsupportedHints": []
+}

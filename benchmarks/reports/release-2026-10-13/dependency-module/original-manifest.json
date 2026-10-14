@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "patchSha256": "4734ac17b3c60a72ea38c254ea46c214f444adce17f57c5797a6d8330f61d4f1",
+  "baseCommit": "cf3be6f799027a1f735a72329241cf134693acd2",
+  "changedFiles": [
+    "src/auth/auth-service.ts",
+    "src/auth/login-policy.ts"
+  ],
+  "changes": [
+    {
+      "status": "M",
+      "path": "src/auth/auth-service.ts"
+    },
+    {
+      "status": "A",
+      "path": "src/auth/login-policy.ts"
+    }
+  ],
+  "diffFile": "result.diff",
+  "createdAt": "2026-10-12T23:49:06.374Z"
+}

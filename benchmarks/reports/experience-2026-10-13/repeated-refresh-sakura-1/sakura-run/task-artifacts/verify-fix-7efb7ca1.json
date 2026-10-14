@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "patchSha256": "f85052dc6eafc79d62022550cfcce00d3d7a8a8ec565d303027489ba7cf78159",
+  "baseCommit": "4ddb4deff2bf05e3f373580825681a4243910b11",
+  "changedFiles": [
+    "tests/check.mjs"
+  ],
+  "changes": [
+    {
+      "status": "M",
+      "path": "tests/check.mjs"
+    }
+  ],
+  "diffFile": "verify-fix-7efb7ca1.diff",
+  "createdAt": "2026-10-13T00:47:50.938Z"
+}

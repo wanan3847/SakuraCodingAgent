@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "patchSha256": "aeb622200f35ecf01b690bd6f974e6652a4830ea30a0d767f9a4c1e2f1ccfaaa",
+  "baseCommit": "98af8b32b832daaf7bf871be57486a16d989443b",
+  "changedFiles": [
+    "src/auth/token-service.ts"
+  ],
+  "changes": [
+    {
+      "status": "M",
+      "path": "src/auth/token-service.ts"
+    }
+  ],
+  "diffFile": "result.diff",
+  "createdAt": "2026-10-12T23:50:14.527Z"
+}

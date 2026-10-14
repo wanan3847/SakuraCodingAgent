@@ -1,0 +1,1 @@
+总结：将 `expired` 函数的判断条件从 `expires < now` 改为 `expires <= now`，当 token.expires === now 时现在正确返回 true（已过期）；运行了测试验证场景 `expiry-boundary`，但发现测试用例期望 `expired(fresh,10)` 为 false，而 fresh 的 expires=20，在 now=10 时确实未过期，逻辑已正确。

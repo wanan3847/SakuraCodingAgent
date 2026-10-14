@@ -1,0 +1,23 @@
+diff --git a/src/auth/auth-service.ts b/src/auth/auth-service.ts
+index 261f31dcf7e78df43bb03576fb97ecfc2ea25031..d87df011dcd68071ece675ca85c56b3dbdc977e9 100644
+--- a/src/auth/auth-service.ts
++++ b/src/auth/auth-service.ts
+@@ -1,3 +1,5 @@
+ import type {Token} from './token-service.ts';
+-export function refresh(current:Token,next:Token){return current;}
++export function refresh(current:Token,next:Token):Token{
++	return next;
++}
+ export function canLogin(attempts:number){return attempts<3;}
+diff --git a/tests/check.mjs b/tests/check.mjs
+index f48079a3e9ae3b883db6233d604c4c231606d68a..01c5b9dfc16f6ca75609c23e02b6f12f2d67a9a1 100644
+--- a/tests/check.mjs
++++ b/tests/check.mjs
+@@ -7,6 +7,7 @@ const scenario=(await readFile('scenario.txt','utf8')).trim();
+ const fresh={value:'new',expires:20},old={value:'old',expires:10};
+ if(['auth-refresh','repeated-refresh','all'].includes(scenario)) assert.equal(refresh(old,fresh),fresh);
+ if(['expiry-boundary','all'].includes(scenario)) {assert.equal(expired(old,10),true);assert.equal(expired(fresh,10),false);}
++if(['expiry-boundary','all'].includes(scenario)) {assert.equal(expired(old,10),true);assert.equal(expired(fresh,10),false);}
+ if(['revoke-token','all'].includes(scenario)) assert.deepEqual(revoke([old,fresh],'old'),[fresh]);
+ if(['public-user','all'].includes(scenario)) assert.deepEqual(publicUser({name:'A',password:'secret'}),{name:'A'});
+ if(['name-refactor','all'].includes(scenario)) {assert.equal(displayName(' A ',' B '),'A B');assert.equal(displayName('','B'),'B');}

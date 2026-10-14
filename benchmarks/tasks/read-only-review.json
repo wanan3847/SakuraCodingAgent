@@ -1,0 +1,28 @@
+{
+  "id": "read-only-review",
+  "repo": {
+    "bundle": "../fixtures/token-refresh.bundle",
+    "commit": "4fee113ac4adace37da9da8e83e8c2d5b82c7708"
+  },
+  "task": {
+    "description": "只读审查 auth refresh；指出旧 token 返回问题与文件位置，不修改文件。",
+    "type": "research",
+    "hintFiles": [
+      "src/auth/auth-service.ts"
+    ]
+  },
+  "verification": {
+    "commands": [
+      "npm run typecheck",
+      "npm test"
+    ],
+    "readOnly": true,
+    "findingPattern": "旧|stale|current",
+    "locationPattern": "src/auth/auth-service\\.ts|auth-service\\.ts"
+  },
+  "limits": {
+    "timeoutMs": 600000
+  },
+  "baselineExpected": "pass",
+  "correctCommit": "618445df407d4405687a677a16fd34a59b69a41e"
+}

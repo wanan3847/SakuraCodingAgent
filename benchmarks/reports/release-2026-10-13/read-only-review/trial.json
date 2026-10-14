@@ -1,0 +1,65 @@
+{
+  "taskId": "read-only-review",
+  "variant": "sakura",
+  "repeat": 1,
+  "baseCommit": "4fee113ac4adace37da9da8e83e8c2d5b82c7708",
+  "timeoutMs": 600000,
+  "status": "passed",
+  "durationMs": 109735,
+  "metricsScope": "complete",
+  "experienceSeed": null,
+  "execution": "succeeded",
+  "replans": 0,
+  "retries": 0,
+  "toolCalls": 17,
+  "tokensIn": 55321,
+  "tokensOut": 1690,
+  "agentCalls": 2,
+  "filesRead": 1,
+  "contextTokens": 2626,
+  "contextTokenMeasurement": "utf8-bytes-upper-estimate",
+  "verification": {
+    "passed": true,
+    "status": "passed",
+    "steps": [
+      {
+        "command": "npm run typecheck",
+        "exitCode": 0,
+        "durationMs": 498,
+        "stdoutTail": "\n> typecheck\n> tsc --noEmit\n\n",
+        "stderrTail": ""
+      },
+      {
+        "command": "npm test",
+        "exitCode": 0,
+        "durationMs": 175,
+        "stdoutTail": "\n> test\n> node tests/check.mjs\n\nRead-only fixture: static stale-token finding required; no code edits expected.\nscenario checks passed: read-only-review\n",
+        "stderrTail": ""
+      }
+    ],
+    "reviewedDiff": false,
+    "failures": []
+  },
+  "fixedVerification": {
+    "passed": true,
+    "status": "passed",
+    "steps": [
+      {
+        "command": "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/Users/yangyazhou/SakuraCodingAgent/sakura/node_modules/typescript/bin/tsc' --noEmit -p '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-JpngqE/tsconfig.json'",
+        "exitCode": 0,
+        "durationMs": 380,
+        "stdoutTail": "",
+        "stderrTail": ""
+      },
+      {
+        "command": "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-JpngqE/check.mjs'",
+        "exitCode": 0,
+        "durationMs": 78,
+        "stdoutTail": "Read-only fixture: static stale-token finding required; no code edits expected.\nscenario checks passed: read-only-review\n",
+        "stderrTail": ""
+      }
+    ],
+    "reviewedDiff": false,
+    "failures": []
+  }
+}

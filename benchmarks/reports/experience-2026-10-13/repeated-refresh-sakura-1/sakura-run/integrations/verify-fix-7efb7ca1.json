@@ -1,0 +1,9 @@
+{
+  "createdAt": 1791852457015,
+  "id": "verify-fix-7efb7ca1",
+  "taskId": "verify-fix",
+  "workspacePath": "/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-benchmark-trial-hSqW5b/.sakura/worktrees/verify-fix-7efb7ca1",
+  "baseCommit": "4ddb4deff2bf05e3f373580825681a4243910b11",
+  "status": "integrated",
+  "artifactPath": "/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-benchmark-trial-hSqW5b/.sakura/runs/run-mv5ylojy-1bfaf7d7/task-artifacts/verify-fix-7efb7ca1.json"
+}

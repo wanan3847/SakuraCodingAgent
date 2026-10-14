@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "correctCommit": "618445df407d4405687a677a16fd34a59b69a41e",
+  "tasks": [
+    {
+      "id": "auth-refresh",
+      "commit": "927ef100997a75d2055be76f6694987b1dc9c18a"
+    },
+    {
+      "id": "expiry-boundary",
+      "commit": "98af8b32b832daaf7bf871be57486a16d989443b"
+    },
+    {
+      "id": "revoke-token",
+      "commit": "2fd0e5c9a9a2722fd4bfe8e621c65f57ee64dc97"
+    },
+    {
+      "id": "public-user",
+      "commit": "9ea71ed303eeeeb704a4d3a46dcd8bd121b38262"
+    },
+    {
+      "id": "new-cache",
+      "commit": "9d440e6b60d2071276e988de3d935fc071fe074f"
+    },
+    {
+      "id": "name-refactor",
+      "commit": "a45a569aa00c067bc56f312f70d10a2f395e1d8d"
+    },
+    {
+      "id": "read-only-review",
+      "commit": "4fee113ac4adace37da9da8e83e8c2d5b82c7708"
+    },
+    {
+      "id": "dependency-module",
+      "commit": "cf3be6f799027a1f735a72329241cf134693acd2"
+    },
+    {
+      "id": "repeated-refresh",
+      "commit": "a3a04a92b3702dec8af760f5fc9195f15ac01ef4"
+    },
+    {
+      "id": "cancel-recovery",
+      "commit": "a8fbda36a536e682d56fb8573ce1869174546c25"
+    }
+  ]
+}

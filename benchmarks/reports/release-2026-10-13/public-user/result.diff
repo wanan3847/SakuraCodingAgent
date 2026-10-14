@@ -1,0 +1,9 @@
+diff --git a/src/users/users.ts b/src/users/users.ts
+index 6d5a78558df54257a165408c38a2c41d7f536352..f169a55043914e85187daaf8659a0275a7c2d0f0 100644
+--- a/src/users/users.ts
++++ b/src/users/users.ts
+@@ -1,3 +1,3 @@
+ export interface User {name:string;password:string}
+-export function publicUser(user:User){return user;}
++export function publicUser(user:User){return {name:user.name};}
+ export function displayName(first:string,last:string){return [first.trim(),last.trim()].filter(Boolean).join(' ');}

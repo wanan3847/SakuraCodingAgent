@@ -1,0 +1,77 @@
+{
+  "taskId": "repeated-refresh",
+  "variant": "sakura",
+  "repeat": 1,
+  "baseCommit": "a3a04a92b3702dec8af760f5fc9195f15ac01ef4",
+  "timeoutMs": 600000,
+  "status": "passed",
+  "durationMs": 161161,
+  "metricsScope": "complete",
+  "experienceSeed": "/Users/yangyazhou/SakuraCodingAgent/sakura/.sakura/benchmarks/experience-seed",
+  "experienceSeedSha256": "3c0eaa3addccfd6bc84d576d7ba93fe599332f503e7bf3cb8684cc55717cefb1",
+  "execution": "succeeded",
+  "replans": 1,
+  "retries": 0,
+  "toolCalls": 10,
+  "tokensIn": 48961,
+  "tokensOut": 1635,
+  "agentCalls": 6,
+  "filesRead": 3,
+  "contextTokens": 3577,
+  "contextTokenMeasurement": "Pi assistant usage peak(input + cacheRead)",
+  "conflicts": 0,
+  "contextPackTokens": 3015,
+  "contextPackEstimator": "utf8-bytes-upper-estimate",
+  "experienceSources": [
+    {
+      "source": "experience-1",
+      "text": "修复刷新 token 后仍返回旧 token 的问题，补充回归证据。 | source: run-mv5w1y9y-dc91d70c (.sakura/benchmarks/local-release-smoke-r5/auth-refresh-sakura-1/sakura-run) | worked: 改了 `refresh` 函数使其返回新 token；通过 `scenario.txt` 中的 `auth-refresh` 测试验证修复，回归证据为 `assert.equal(refresh(old,fresh),fresh)` 成立。",
+      "weight": 105,
+      "estimatedTokens": 389
+    }
+  ],
+  "verification": {
+    "passed": true,
+    "status": "passed",
+    "steps": [
+      {
+        "command": "npm run typecheck",
+        "exitCode": 0,
+        "durationMs": 395,
+        "stdoutTail": "\n> typecheck\n> tsc --noEmit\n\n",
+        "stderrTail": ""
+      },
+      {
+        "command": "npm test",
+        "exitCode": 0,
+        "durationMs": 144,
+        "stdoutTail": "\n> test\n> node tests/check.mjs\n\nscenario checks passed: repeated-refresh\n",
+        "stderrTail": ""
+      }
+    ],
+    "reviewedDiff": false,
+    "failures": []
+  },
+  "fixedVerification": {
+    "passed": true,
+    "status": "passed",
+    "steps": [
+      {
+        "command": "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/Users/yangyazhou/SakuraCodingAgent/sakura/node_modules/typescript/bin/tsc' --noEmit -p '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-bzL3yD/tsconfig.json'",
+        "exitCode": 0,
+        "durationMs": 302,
+        "stdoutTail": "",
+        "stderrTail": ""
+      },
+      {
+        "command": "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-bzL3yD/check.mjs'",
+        "exitCode": 0,
+        "durationMs": 63,
+        "stdoutTail": "scenario checks passed: repeated-refresh\n",
+        "stderrTail": ""
+      }
+    ],
+    "reviewedDiff": false,
+    "failures": []
+  }
+}

@@ -1,0 +1,298 @@
+{
+  "checkedAt": "2026-10-13T00:42:49.123Z",
+  "modelTrials": 5,
+  "codingTrials": 4,
+  "hasNewFile": true,
+  "passed": true,
+  "results": [
+    {
+      "taskId": "auth-refresh",
+      "suite": "local-release-smoke-r5",
+      "review": "refresh 返回 next；保存的补丁只修改 auth-service.ts。",
+      "baseCommit": "927ef100997a75d2055be76f6694987b1dc9c18a",
+      "model": "ollama/sakura-bench-qwen35-4b",
+      "readOnly": false,
+      "changedFiles": [
+        "src/auth/auth-service.ts"
+      ],
+      "patchSha256": "ed1ae94c6b923d3f1ff7c38e650f33e5d114ef3097ed9f8f639eb25fdf7d4798",
+      "verification": {
+        "passed": true,
+        "status": "passed",
+        "steps": [
+          {
+            "command": "npm run typecheck",
+            "exitCode": 0,
+            "durationMs": 2598,
+            "stdoutTail": "\n> typecheck\n> tsc --noEmit\n\n",
+            "stderrTail": ""
+          },
+          {
+            "command": "npm test",
+            "exitCode": 0,
+            "durationMs": 609,
+            "stdoutTail": "\n> test\n> node tests/check.mjs\n\nscenario checks passed: auth-refresh\n",
+            "stderrTail": ""
+          }
+        ],
+        "reviewedDiff": false,
+        "failures": []
+      },
+      "frozen": {
+        "passed": true,
+        "status": "passed",
+        "steps": [
+          {
+            "command": "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/Users/yangyazhou/SakuraCodingAgent/sakura/node_modules/typescript/bin/tsc' --noEmit -p '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-zPl2Tn/tsconfig.json'",
+            "exitCode": 0,
+            "durationMs": 1526,
+            "stdoutTail": "",
+            "stderrTail": ""
+          },
+          {
+            "command": "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-zPl2Tn/check.mjs'",
+            "exitCode": 0,
+            "durationMs": 230,
+            "stdoutTail": "scenario checks passed: auth-refresh\n",
+            "stderrTail": ""
+          }
+        ],
+        "reviewedDiff": false,
+        "failures": []
+      },
+      "reviewedBy": "Codex: source diff and replay audit",
+      "passed": true
+    },
+    {
+      "taskId": "dependency-module",
+      "suite": "local-release-smoke-r7",
+      "review": "新增 login-policy.ts，并将 canLogin 接入 loginLimit。存在非必要的反向 import，但没有顶层调用，当前 ESM 执行和冻结检查通过。",
+      "baseCommit": "cf3be6f799027a1f735a72329241cf134693acd2",
+      "model": "ollama/sakura-bench-qwen35-4b",
+      "readOnly": false,
+      "changedFiles": [
+        "src/auth/auth-service.ts",
+        "src/auth/login-policy.ts"
+      ],
+      "patchSha256": "4734ac17b3c60a72ea38c254ea46c214f444adce17f57c5797a6d8330f61d4f1",
+      "verification": {
+        "passed": true,
+        "status": "passed",
+        "steps": [
+          {
+            "command": "npm run typecheck",
+            "exitCode": 0,
+            "durationMs": 1846,
+            "stdoutTail": "\n> typecheck\n> tsc --noEmit\n\n",
+            "stderrTail": ""
+          },
+          {
+            "command": "npm test",
+            "exitCode": 0,
+            "durationMs": 523,
+            "stdoutTail": "\n> test\n> node tests/check.mjs\n\nscenario checks passed: dependency-module\n",
+            "stderrTail": ""
+          }
+        ],
+        "reviewedDiff": false,
+        "failures": []
+      },
+      "frozen": {
+        "passed": true,
+        "status": "passed",
+        "steps": [
+          {
+            "command": "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/Users/yangyazhou/SakuraCodingAgent/sakura/node_modules/typescript/bin/tsc' --noEmit -p '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-disqNu/tsconfig.json'",
+            "exitCode": 0,
+            "durationMs": 1910,
+            "stdoutTail": "",
+            "stderrTail": ""
+          },
+          {
+            "command": "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-disqNu/check.mjs'",
+            "exitCode": 0,
+            "durationMs": 238,
+            "stdoutTail": "scenario checks passed: dependency-module\n",
+            "stderrTail": ""
+          }
+        ],
+        "reviewedDiff": false,
+        "failures": []
+      },
+      "reviewedBy": "Codex: source diff and replay audit",
+      "passed": true
+    },
+    {
+      "taskId": "expiry-boundary",
+      "suite": "local-release-smoke-r7",
+      "review": "expires 等于 now 时判定过期，边界使用 <=。",
+      "baseCommit": "98af8b32b832daaf7bf871be57486a16d989443b",
+      "model": "ollama/sakura-bench-qwen35-4b",
+      "readOnly": false,
+      "changedFiles": [
+        "src/auth/token-service.ts"
+      ],
+      "patchSha256": "aeb622200f35ecf01b690bd6f974e6652a4830ea30a0d767f9a4c1e2f1ccfaaa",
+      "verification": {
+        "passed": true,
+        "status": "passed",
+        "steps": [
+          {
+            "command": "npm run typecheck",
+            "exitCode": 0,
+            "durationMs": 1926,
+            "stdoutTail": "\n> typecheck\n> tsc --noEmit\n\n",
+            "stderrTail": ""
+          },
+          {
+            "command": "npm test",
+            "exitCode": 0,
+            "durationMs": 557,
+            "stdoutTail": "\n> test\n> node tests/check.mjs\n\nscenario checks passed: expiry-boundary\n",
+            "stderrTail": ""
+          }
+        ],
+        "reviewedDiff": false,
+        "failures": []
+      },
+      "frozen": {
+        "passed": true,
+        "status": "passed",
+        "steps": [
+          {
+            "command": "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/Users/yangyazhou/SakuraCodingAgent/sakura/node_modules/typescript/bin/tsc' --noEmit -p '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-NITWxy/tsconfig.json'",
+            "exitCode": 0,
+            "durationMs": 1386,
+            "stdoutTail": "",
+            "stderrTail": ""
+          },
+          {
+            "command": "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-NITWxy/check.mjs'",
+            "exitCode": 0,
+            "durationMs": 230,
+            "stdoutTail": "scenario checks passed: expiry-boundary\n",
+            "stderrTail": ""
+          }
+        ],
+        "reviewedDiff": false,
+        "failures": []
+      },
+      "reviewedBy": "Codex: source diff and replay audit",
+      "passed": true
+    },
+    {
+      "taskId": "public-user",
+      "suite": "local-release-smoke-r7",
+      "review": "返回新的 {name} 对象，不泄露 password。",
+      "baseCommit": "9ea71ed303eeeeb704a4d3a46dcd8bd121b38262",
+      "model": "ollama/sakura-bench-qwen35-4b",
+      "readOnly": false,
+      "changedFiles": [
+        "src/users/users.ts"
+      ],
+      "patchSha256": "14137c14c8aef578eac5f84a91f27c154b90ecd9e8ae8c51b74e65ca9bf29d86",
+      "verification": {
+        "passed": true,
+        "status": "passed",
+        "steps": [
+          {
+            "command": "npm run typecheck",
+            "exitCode": 0,
+            "durationMs": 1780,
+            "stdoutTail": "\n> typecheck\n> tsc --noEmit\n\n",
+            "stderrTail": ""
+          },
+          {
+            "command": "npm test",
+            "exitCode": 0,
+            "durationMs": 632,
+            "stdoutTail": "\n> test\n> node tests/check.mjs\n\nscenario checks passed: public-user\n",
+            "stderrTail": ""
+          }
+        ],
+        "reviewedDiff": false,
+        "failures": []
+      },
+      "frozen": {
+        "passed": true,
+        "status": "passed",
+        "steps": [
+          {
+            "command": "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/Users/yangyazhou/SakuraCodingAgent/sakura/node_modules/typescript/bin/tsc' --noEmit -p '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-GTY873/tsconfig.json'",
+            "exitCode": 0,
+            "durationMs": 1386,
+            "stdoutTail": "",
+            "stderrTail": ""
+          },
+          {
+            "command": "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-GTY873/check.mjs'",
+            "exitCode": 0,
+            "durationMs": 195,
+            "stdoutTail": "scenario checks passed: public-user\n",
+            "stderrTail": ""
+          }
+        ],
+        "reviewedDiff": false,
+        "failures": []
+      },
+      "reviewedBy": "Codex: source diff and replay audit",
+      "passed": true
+    },
+    {
+      "taskId": "read-only-review",
+      "suite": "local-release-smoke-r6",
+      "review": "未修改仓库；最终回答准确指出 auth-service.ts:2 返回旧 token。",
+      "baseCommit": "4fee113ac4adace37da9da8e83e8c2d5b82c7708",
+      "model": "ollama/sakura-bench-qwen35-4b",
+      "readOnly": true,
+      "changedFiles": [],
+      "patchSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "verification": {
+        "passed": true,
+        "status": "passed",
+        "steps": [
+          {
+            "command": "npm run typecheck",
+            "exitCode": 0,
+            "durationMs": 1835,
+            "stdoutTail": "\n> typecheck\n> tsc --noEmit\n\n",
+            "stderrTail": ""
+          },
+          {
+            "command": "npm test",
+            "exitCode": 0,
+            "durationMs": 516,
+            "stdoutTail": "\n> test\n> node tests/check.mjs\n\nRead-only fixture: static stale-token finding required; no code edits expected.\nscenario checks passed: read-only-review\n",
+            "stderrTail": ""
+          }
+        ],
+        "reviewedDiff": false,
+        "failures": []
+      },
+      "frozen": {
+        "passed": true,
+        "status": "passed",
+        "steps": [
+          {
+            "command": "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/Users/yangyazhou/SakuraCodingAgent/sakura/node_modules/typescript/bin/tsc' --noEmit -p '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-ORh19f/tsconfig.json'",
+            "exitCode": 0,
+            "durationMs": 1400,
+            "stdoutTail": "",
+            "stderrTail": ""
+          },
+          {
+            "command": "'/opt/homebrew/Cellar/node/26.10.0_1/bin/node' '/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-fixture-judge-ORh19f/check.mjs'",
+            "exitCode": 0,
+            "durationMs": 242,
+            "stdoutTail": "Read-only fixture: static stale-token finding required; no code edits expected.\nscenario checks passed: read-only-review\n",
+            "stderrTail": ""
+          }
+        ],
+        "reviewedDiff": false,
+        "failures": []
+      },
+      "reviewedBy": "Codex: source diff and replay audit",
+      "passed": true
+    }
+  ]
+}

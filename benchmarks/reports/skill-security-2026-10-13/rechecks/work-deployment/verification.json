@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-13T04:36:00.583681+00:00",
+  "platform": "darwin",
+  "sourceSha256": "d300719aa848fbf505d0a2688f964f92a150416412180761d013172dc1b0600b",
+  "typecheck": true,
+  "tests": {
+    "total": 144,
+    "passed": 144,
+    "failed": 0,
+    "skipped": 0
+  },
+  "addedCoverage": [
+    "canonical authority read denial",
+    "host Unix socket denial",
+    "protected OS sandbox preflight"
+  ],
+  "linuxProtectedReplayValidated": false
+}

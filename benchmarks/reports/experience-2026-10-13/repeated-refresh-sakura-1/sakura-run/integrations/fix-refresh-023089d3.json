@@ -1,0 +1,9 @@
+{
+  "createdAt": 1791852360331,
+  "id": "fix-refresh-023089d3",
+  "taskId": "fix-refresh",
+  "workspacePath": "/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-benchmark-trial-hSqW5b/.sakura/worktrees/fix-refresh-023089d3",
+  "baseCommit": "618199441d7831ad6b94b4e7db4af5a5b86f3738",
+  "status": "integrated",
+  "artifactPath": "/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-benchmark-trial-hSqW5b/.sakura/runs/run-mv5ylojy-1bfaf7d7/task-artifacts/fix-refresh-023089d3.json"
+}

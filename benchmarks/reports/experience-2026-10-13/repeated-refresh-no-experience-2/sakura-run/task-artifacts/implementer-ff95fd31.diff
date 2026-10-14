@@ -1,0 +1,11 @@
+diff --git a/src/auth/auth-service.ts b/src/auth/auth-service.ts
+index 540af28d2df18d2f128b96d4ca6475651677d60c..50ffff0b25ed5cfeabcf1c073c5944839a4d4bdd 100644
+--- a/src/auth/auth-service.ts
++++ b/src/auth/auth-service.ts
+@@ -4,5 +4,5 @@ import type {Token} from './token-service.ts';
+ export function refresh(current: Token, next: Token) {
+   return new Token({ value: next.value, expires: Math.min(next.expires, 20) });
+ }
+-export function refresh(current:Token,next:Token){return new Token({value:next.value,expires:Math.min(next.expires,20)});}
++
+ export function canLogin(attempts:number){return attempts<3;}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" fill="none">
+<defs>
+ <linearGradient id="petal" x1="260" y1="48" x2="260" y2="273" gradientUnits="userSpaceOnUse"><stop stop-color="#fde8f2"/><stop offset=".47" stop-color="#f3b0d1"/><stop offset="1" stop-color="#dd86b2"/></linearGradient>
+ <linearGradient id="fold" x1="220" y1="58" x2="302" y2="220" gradientUnits="userSpaceOnUse"><stop stop-color="#fff" stop-opacity=".83"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+ <filter id="shadow" x="-45%" y="-40%" width="190%" height="190%"><feDropShadow dx="0" dy="10" stdDeviation="13" flood-color="#8b5074" flood-opacity=".12"/></filter>
+ <path id="shape" d="M260 272C244 251 173 194 173 130C173 78 208 41 244 47L260 66L276 47C312 41 347 78 347 130C347 194 276 251 260 272Z"/>
+</defs>
+<g filter="url(#shadow)">
+ <g transform="rotate(288 260 272)"><use href="#shape" fill="url(#petal)"/><use href="#shape" fill="url(#fold)"/></g>
+ <g transform="rotate(216 260 272)"><use href="#shape" fill="url(#petal)"/><use href="#shape" fill="url(#fold)"/></g>
+ <g transform="rotate(144 260 272)"><use href="#shape" fill="url(#petal)"/><use href="#shape" fill="url(#fold)"/></g>
+ <g transform="rotate(72 260 272)"><use href="#shape" fill="url(#petal)"/><use href="#shape" fill="url(#fold)"/></g>
+ <g><use href="#shape" fill="url(#petal)"/><use href="#shape" fill="url(#fold)"/></g>
+</g>
+<g fill="#f8dd99" fill-opacity=".94"><circle cx="260" cy="272" r="11"/><circle cx="260" cy="249" r="3"/><circle cx="282" cy="265" r="3"/><circle cx="274" cy="291" r="3"/><circle cx="246" cy="291" r="3"/><circle cx="238" cy="265" r="3"/></g>
+<g stroke="#fff" stroke-opacity=".45"><path d="M260 249V272M282 265L260 272M274 291L260 272M246 291L260 272M238 265L260 272"/></g>
+</svg>

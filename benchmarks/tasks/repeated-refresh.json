@@ -1,0 +1,26 @@
+{
+  "id": "repeated-refresh",
+  "repo": {
+    "bundle": "../fixtures/token-refresh.bundle",
+    "commit": "a3a04a92b3702dec8af760f5fc9195f15ac01ef4"
+  },
+  "task": {
+    "description": "再次修复 refresh 返回 stale token 的相同问题，记录经验是否减少探索。",
+    "type": "bugfix",
+    "hintFiles": [
+      "src/auth/auth-service.ts"
+    ]
+  },
+  "verification": {
+    "commands": [
+      "npm run typecheck",
+      "npm test"
+    ],
+    "readOnly": false
+  },
+  "limits": {
+    "timeoutMs": 600000
+  },
+  "baselineExpected": "fail",
+  "correctCommit": "618445df407d4405687a677a16fd34a59b69a41e"
+}

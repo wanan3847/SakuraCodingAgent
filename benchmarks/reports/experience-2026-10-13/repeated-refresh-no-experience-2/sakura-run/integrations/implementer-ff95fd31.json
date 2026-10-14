@@ -1,0 +1,10 @@
+{
+  "createdAt": 1791852934510,
+  "id": "implementer-ff95fd31",
+  "taskId": "implementer",
+  "workspacePath": "/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-benchmark-trial-Jc1aZc/.sakura/worktrees/implementer-ff95fd31",
+  "baseCommit": "a2f4a502bf4a35d89338ebe10d33c5f4507053bf",
+  "status": "failed",
+  "artifactPath": "/var/folders/n0/lb5fqzh96hxg_dwm3qkfjlth0000gn/T/sakura-benchmark-trial-Jc1aZc/.sakura/runs/run-mv5yp4np-6edafe69/task-artifacts/implementer-ff95fd31.json",
+  "error": "Task cancelled"
+}

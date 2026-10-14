@@ -1,0 +1,26 @@
+{
+  "id": "new-cache",
+  "repo": {
+    "bundle": "../fixtures/token-refresh.bundle",
+    "commit": "9d440e6b60d2071276e988de3d935fc071fe074f"
+  },
+  "task": {
+    "description": "新增 src/auth/cache.ts：TokenCache 支持 set/get，达到 expires 后返回 undefined。",
+    "type": "feature",
+    "hintFiles": [
+      "src/auth/cache.ts"
+    ]
+  },
+  "verification": {
+    "commands": [
+      "npm run typecheck",
+      "npm test"
+    ],
+    "readOnly": false
+  },
+  "limits": {
+    "timeoutMs": 600000
+  },
+  "baselineExpected": "fail",
+  "correctCommit": "618445df407d4405687a677a16fd34a59b69a41e"
+}

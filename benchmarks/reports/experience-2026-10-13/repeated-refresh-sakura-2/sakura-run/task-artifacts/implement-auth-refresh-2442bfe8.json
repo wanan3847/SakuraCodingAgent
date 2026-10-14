@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "patchSha256": "ed1ae94c6b923d3f1ff7c38e650f33e5d114ef3097ed9f8f639eb25fdf7d4798",
+  "baseCommit": "9979f2d05f05f3361ca40011d6501a8fda33bec6",
+  "changedFiles": [
+    "src/auth/auth-service.ts"
+  ],
+  "changes": [
+    {
+      "status": "M",
+      "path": "src/auth/auth-service.ts"
+    }
+  ],
+  "diffFile": "implement-auth-refresh-2442bfe8.diff",
+  "createdAt": "2026-10-13T01:01:29.212Z"
+}

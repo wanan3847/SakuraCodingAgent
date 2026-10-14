@@ -1,0 +1,41 @@
+name: Pi compatibility
+on:
+  push:
+    paths-ignore: ["docs/**", "**.md", ".sakura/**"]
+  pull_request:
+    paths-ignore: ["docs/**", "**.md", ".sakura/**"]
+  schedule:
+    - cron: "17 2 * * *"
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Published Pi version to check"
+        default: "latest"
+        required: true
+permissions:
+  contents: read
+jobs:
+  compatibility:
+    # Protected skill replay uses the macOS OS sandbox; unsupported hosts fail closed.
+    runs-on: macos-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - run: npm ci --ignore-scripts
+      - run: npm run check
+      - run: npm run check:plugin
+      - name: Check isolated release candidate
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        env:
+          PI_CANDIDATE_VERSION: ${{ inputs.version || 'latest' }}
+        run: npm run check:pi-update -- --version "$PI_CANDIDATE_VERSION" --report .sakura/upgrades/candidate.json
+      - uses: actions/upload-artifact@v4
+        if: always() && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
+        with:
+          name: pi-candidate-report
+          path: .sakura/upgrades/candidate.json

@@ -1,0 +1,26 @@
+{
+  "id": "auth-refresh",
+  "repo": {
+    "bundle": "../fixtures/token-refresh.bundle",
+    "commit": "927ef100997a75d2055be76f6694987b1dc9c18a"
+  },
+  "task": {
+    "description": "修复刷新 token 后仍返回旧 token 的问题，补充回归证据。",
+    "type": "bugfix",
+    "hintFiles": [
+      "src/auth/auth-service.ts"
+    ]
+  },
+  "verification": {
+    "commands": [
+      "npm run typecheck",
+      "npm test"
+    ],
+    "readOnly": false
+  },
+  "limits": {
+    "timeoutMs": 600000
+  },
+  "baselineExpected": "fail",
+  "correctCommit": "618445df407d4405687a677a16fd34a59b69a41e"
+}
